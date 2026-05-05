@@ -1,4 +1,5 @@
 import ServiceDetailsTabSync from "@/components/ServiceDetailsTabSync";
+import { Suspense } from "react";
 
 export const metadata = { title: "Service Details" };
 
@@ -6,7 +7,10 @@ export default function ServiceDetailsPage() {
   return (
     <>
       <main className="main">
-          <ServiceDetailsTabSync />
+          {/* <ServiceDetailsTabSync /> */}
+          <Suspense fallback={null}>
+            <ServiceDetailsTabSync />
+          </Suspense>
           {/* Page Title */}
           <div className="page-title">
             <div className="heading">
