@@ -1,3 +1,4 @@
+import QuoteModal from "@/components/QuoteModal";
 import React from 'react'
 
 export default function HomePage() {
@@ -67,7 +68,7 @@ export default function HomePage() {
                     data-aos="fade-right"
                     data-aos-delay={600}
                 >
-                    <a href="/appointment" className="btn btn-primary">
+                    <a href="#quote" className="btn btn-primary" data-quote-modal-trigger>
                     Get a Free Quote
                     </a>
                     <a
@@ -784,6 +785,7 @@ export default function HomePage() {
         </section>
         {/* /Call To Action Section */}
     </main>
+    <QuoteModal />
     </>
   )
 }
