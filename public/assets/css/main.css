@@ -281,6 +281,24 @@ h6 {
     padding-right: 0;
   }
 
+  .navmenu>ul>li.quote-nav-item {
+    max-width: 0;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+    opacity: 0;
+    transform: translateX(12px);
+    transition: max-width 0.35s ease, padding 0.35s ease, opacity 0.25s ease, transform 0.35s ease;
+  }
+
+  .navmenu>ul>li.quote-nav-item.is-visible {
+    max-width: 160px;
+    padding-left: 12px;
+    padding-right: 0;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
@@ -294,6 +312,29 @@ h6 {
     white-space: nowrap;
     transition: 0.3s;
     position: relative;
+  }
+
+  .navmenu a.quote-nav-button,
+  .navmenu a.quote-nav-button:focus {
+    min-width: 128px;
+    min-height: 42px;
+    justify-content: center;
+    padding: 0 18px;
+    border-radius: 8px;
+    color: var(--contrast-color);
+    background: var(--bluelogo-color);
+    font-weight: 700;
+    box-shadow: 0 10px 22px color-mix(in srgb, var(--bluelogo-color), transparent 78%);
+  }
+
+  .navmenu a.quote-nav-button:hover,
+  .navmenu a.quote-nav-button:focus:hover {
+    color: var(--contrast-color);
+    background: color-mix(in srgb, var(--bluelogo-color), black 12%);
+  }
+
+  .navmenu a.quote-nav-button:before {
+    display: none;
   }
 
   .navmenu a i,
@@ -347,6 +388,11 @@ h6 {
   }
 
   .navmenu>ul>li:last-child.dropdown ul {
+    left: auto;
+    right: 0;
+  }
+
+  .navmenu>ul>li.more-dropdown ul {
     left: auto;
     right: 0;
   }
@@ -489,6 +535,24 @@ h6 {
   .navmenu .dropdown>.dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
+  }
+
+  .navmenu .quote-nav-item {
+    display: none;
+  }
+
+  .navmenu .quote-nav-item.is-visible {
+    display: block;
+  }
+
+  .navmenu a.quote-nav-button,
+  .navmenu a.quote-nav-button:focus {
+    margin: 10px 20px;
+    border-radius: 8px;
+    color: var(--contrast-color);
+    background: var(--bluelogo-color);
+    font-weight: 700;
+    justify-content: center;
   }
 
   .mobile-nav-active {

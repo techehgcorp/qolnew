@@ -1,4 +1,3 @@
-import QuoteModal from "@/components/QuoteModal";
 import React from 'react'
 
 export default function HomePage() {
@@ -785,7 +784,6 @@ export default function HomePage() {
         </section>
         {/* /Call To Action Section */}
     </main>
-    <QuoteModal />
     </>
   )
 }

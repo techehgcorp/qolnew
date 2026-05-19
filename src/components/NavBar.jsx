@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -28,8 +29,43 @@ function isActive(pathname, href) {
 
 export default function NavBar() {
   const pathname = usePathname();
+  const [showQuoteButton, setShowQuoteButton] = useState(false);
   const servicePagesActive = servicePages.some((item) => isActive(pathname, item.href));
   const morePagesActive = morePages.some((item) => isActive(pathname, item.href));
+
+  useEffect(() => {
+    const getFirstPageBlock = () => {
+      const main = document.querySelector("main");
+
+      if (!main) {
+        return null;
+      }
+
+      return main.querySelector(":scope > .page-title, :scope > section, :scope > .section");
+    };
+
+    const updateQuoteButton = () => {
+      const firstBlock = getFirstPageBlock();
+
+      if (!firstBlock) {
+        setShowQuoteButton(window.scrollY > 260);
+        return;
+      }
+
+      const headerHeight = document.querySelector(".header")?.offsetHeight || 0;
+      const firstBlockBottom = firstBlock.offsetTop + firstBlock.offsetHeight;
+      setShowQuoteButton(window.scrollY + headerHeight >= firstBlockBottom - 12);
+    };
+
+    updateQuoteButton();
+    window.addEventListener("scroll", updateQuoteButton, { passive: true });
+    window.addEventListener("resize", updateQuoteButton);
+
+    return () => {
+      window.removeEventListener("scroll", updateQuoteButton);
+      window.removeEventListener("resize", updateQuoteButton);
+    };
+  }, [pathname]);
 
   return (
     <div className="branding d-flex align-items-cente">
@@ -78,20 +114,20 @@ export default function NavBar() {
                 Doctors
               </Link>
             </li> */}
-            <li>
+            {/* <li>
               <Link
                 href="/appointment"
                 className={isActive(pathname, "/appointment") ? "active" : undefined}
               >
                 Appointment
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link href="/contact" className={isActive(pathname, "/contact") ? "active" : undefined}>
                 Contact
               </Link>
             </li>
-            <li className="dropdown">
+            <li className="dropdown more-dropdown">
               <a href="#" className={morePagesActive ? "active" : undefined}>
                 <span>&bull;&bull;&bull;</span> <i className="bi bi-chevron-down toggle-dropdown" />
               </a>
@@ -104,6 +140,11 @@ export default function NavBar() {
                   </li>
                 ))}
               </ul>
+            </li>
+            <li className={`quote-nav-item${showQuoteButton ? " is-visible" : ""}`}>
+              <a href="#quote" className="quote-nav-button" data-quote-modal-trigger>
+                Get a Quote
+              </a>
             </li>
           </ul>
           <i className="mobile-nav-toggle d-xl-none bi bi-list" />

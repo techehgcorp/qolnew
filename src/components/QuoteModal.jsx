@@ -132,17 +132,25 @@ export default function QuoteModal() {
 
   useEffect(() => {
     const openQuoteModal = (event) => {
+      const trigger = event.target?.closest?.("[data-quote-modal-trigger]");
+
+      if (!trigger) {
+        return;
+      }
+
       event.preventDefault();
+      document.body.classList.remove("mobile-nav-active");
+      document.querySelector(".mobile-nav-toggle")?.classList.add("bi-list");
+      document.querySelector(".mobile-nav-toggle")?.classList.remove("bi-x");
       setIsOpen(true);
       setStatus("idle");
       setErrorMessage("");
     };
 
-    const buttons = document.querySelectorAll("[data-quote-modal-trigger]");
-    buttons.forEach((button) => button.addEventListener("click", openQuoteModal));
+    document.addEventListener("click", openQuoteModal);
 
     return () => {
-      buttons.forEach((button) => button.removeEventListener("click", openQuoteModal));
+      document.removeEventListener("click", openQuoteModal);
     };
   }, []);
 

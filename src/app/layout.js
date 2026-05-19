@@ -2,6 +2,7 @@ import "./globals.css";
 import Script from "next/script";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
+import QuoteModal from "@/components/QuoteModal";
 import RouteScriptRefresh from "@/components/RouteScriptRefresh";
 import TopBar from "@/components/TopBar";
 
@@ -45,6 +46,7 @@ export default function RootLayout({ children }) {
           <NavBar />
         </header>
         {children}
+        <QuoteModal />
         <Footer />
         <RouteScriptRefresh />
         <a
