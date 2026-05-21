@@ -757,10 +757,10 @@ export default function ServiceDetailsPage() {
                     </div>
                     <p>Get help with urgent enrollment deadlines and coverage questions.</p>
                     <div className="card-footer">
-                      <a href="tel:+15551234567" className="btn-action">
+                      <a href="tel:+18447300124" className="btn-action">
                         Call Now
                       </a>
-                      <span className="availability">(844) 730-0124</span>
+                      <a href="tel:+18447300124" className="availability">(844) 730-0124</a>
                     </div>
                   </div>
                 </div>

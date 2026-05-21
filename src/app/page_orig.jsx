@@ -1061,7 +1061,7 @@ export default function HomePage() {
                     data-aos="fade-up"
                     data-aos-delay={300}
                 >
-                    <a href="tel:5551234567" className="emergency-call">
+                    <a href="tel:+15551234567" className="emergency-call">
                     <i className="bi bi-telephone" />
                     <span>(555) 123-4567</span>
                     </a>

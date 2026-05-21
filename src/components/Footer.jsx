@@ -22,7 +22,7 @@ export default function Footer() {
                   </div>
                   <div className="contact-item">
                     <i className="bi bi-telephone" />
-                    <span>(844) 730-0124</span>
+                    <a href="tel:+18447300124">(844) 730-0124</a>
                   </div>
                   <div className="contact-item">
                     <i className="bi bi-envelope" />

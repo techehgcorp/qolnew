@@ -441,6 +441,13 @@ h6 {
 /* Mobile Navigation */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
+    display: inline-grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    background: transparent;
     color: var(--nav-color);
     font-size: 28px;
     line-height: 0;
@@ -573,12 +580,18 @@ h6 {
     position: fixed;
     overflow: hidden;
     inset: 0;
+    width: 100vw;
+    height: 100dvh;
     background: rgba(33, 37, 41, 0.8);
     transition: 0.3s;
   }
 
   .mobile-nav-active .navmenu>ul {
     display: block;
+    position: fixed;
+    inset: 60px 20px 20px 20px;
+    height: calc(100dvh - 80px);
+    max-height: calc(100dvh - 80px);
   }
 }
 
@@ -646,8 +659,10 @@ h6 {
   flex-shrink: 0;
 }
 
-.footer-16 .brand-section .contact-info .contact-item span {
+.footer-16 .brand-section .contact-info .contact-item span,
+.footer-16 .brand-section .contact-info .contact-item a {
   line-height: 1.6;
+  color: inherit;
 }
 
 .footer-16 .footer-nav-wrapper {

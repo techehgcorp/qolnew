@@ -455,7 +455,7 @@ export default function HomePage() {
                 </div>
                 </div>
                 <div className="col-lg-4 text-lg-end">
-                <a href="tel:+15551234567" className="emergency-btn">
+                <a href="tel:+18447300124" className="emergency-btn">
                     <i className="bi bi-telephone-fill" />
                     Call an Advisor: (844) 730-0124
                 </a>
@@ -684,7 +684,7 @@ export default function HomePage() {
                     data-aos-delay={300}
                 >
                     <img
-                    src="assets/img/health/facilities-9.webp"
+                    src="assets/img/health/facilities-6.webp"
                     alt="Insurance support team"
                     className="img-fluid"
                     />
@@ -769,7 +769,7 @@ export default function HomePage() {
                     data-aos="fade-up"
                     data-aos-delay={300}
                 >
-                    <a href="tel:5551234567" className="emergency-call">
+                    <a href="tel:+18447300124" className="emergency-call">
                     <i className="bi bi-telephone" />
                     <span>(844) 730-0124</span>
                     </a>

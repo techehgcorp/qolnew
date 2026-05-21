@@ -50,21 +50,27 @@ export default function GalleryPage() {
             <a href="mailto:contact@example.com">contact@example.com</a>
           </i>
           <i className="bi bi-phone d-flex align-items-center ms-4">
-            <span>+1 5589 55488 55</span>
+            <a href="tel:+155895548855">+1 5589 55488 55</a>
           </i>
         </div>
         <div className="social-links d-none d-md-flex align-items-center">
-          <a href="#!" className="twitter">
-            <i className="bi bi-twitter-x" />
-          </a>
-          <a href="#!" className="facebook">
+          <a
+            href="https://www.facebook.com/share/1EaXxabHD4/?mibextid=wwXIfr"
+            className="facebook"
+            aria-label="QoL Insurance on Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="bi bi-facebook" />
           </a>
-          <a href="#!" className="instagram">
+          <a
+            href="https://www.instagram.com/qol_insurance?igsh=MTEwMDg2ZXBjcGp1NA%3D%3D&utm_source=qr"
+            className="instagram"
+            aria-label="QoL Insurance on Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="bi bi-instagram" />
-          </a>
-          <a href="#!" className="linkedin">
-            <i className="bi bi-linkedin" />
           </a>
         </div>
       </div>
@@ -422,7 +428,7 @@ export default function GalleryPage() {
                 </div>
                 <div className="contact-item">
                   <i className="bi bi-telephone" />
-                  <span>+1 (555) 987-6543</span>
+                  <a href="tel:+15559876543">+1 (555) 987-6543</a>
                 </div>
                 <div className="contact-item">
                   <i className="bi bi-envelope" />

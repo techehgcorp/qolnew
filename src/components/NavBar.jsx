@@ -30,8 +30,23 @@ function isActive(pathname, href) {
 export default function NavBar() {
   const pathname = usePathname();
   const [showQuoteButton, setShowQuoteButton] = useState(false);
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const [openDropdowns, setOpenDropdowns] = useState({});
   const servicePagesActive = servicePages.some((item) => isActive(pathname, item.href));
   const morePagesActive = morePages.some((item) => isActive(pathname, item.href));
+
+  const closeMobileNav = () => {
+    setIsMobileNavOpen(false);
+    setOpenDropdowns({});
+  };
+
+  const toggleDropdown = (event, name) => {
+    event.preventDefault();
+    setOpenDropdowns((current) => ({
+      ...current,
+      [name]: !current[name],
+    }));
+  };
 
   useEffect(() => {
     const getFirstPageBlock = () => {
@@ -67,10 +82,40 @@ export default function NavBar() {
     };
   }, [pathname]);
 
+  useEffect(() => {
+    closeMobileNav();
+  }, [pathname]);
+
+  useEffect(() => {
+    document.body.classList.toggle("mobile-nav-active", isMobileNavOpen);
+    document.body.style.overflow = isMobileNavOpen ? "hidden" : "";
+    document.documentElement.style.overflow = isMobileNavOpen ? "hidden" : "";
+
+    return () => {
+      document.body.classList.remove("mobile-nav-active");
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    };
+  }, [isMobileNavOpen]);
+
+  useEffect(() => {
+    const closeOnDesktop = () => {
+      if (window.innerWidth >= 1200) {
+        closeMobileNav();
+      }
+    };
+
+    window.addEventListener("resize", closeOnDesktop);
+
+    return () => {
+      window.removeEventListener("resize", closeOnDesktop);
+    };
+  }, []);
+
   return (
     <div className="branding d-flex align-items-cente">
       <div className="container position-relative d-flex align-items-center justify-content-between">
-        <Link href="/" className="logo d-flex align-items-center">
+        <Link href="/" className="logo d-flex align-items-center" onClick={closeMobileNav}>
           <img src="/assets/img/Logo.png" alt="QoL Insurance" />
           <h1 className="sitename">QoL Insurance</h1>
         </Link>
@@ -78,12 +123,12 @@ export default function NavBar() {
         <nav id="navmenu" className="navmenu">
           <ul>
             <li>
-              <Link href="/" className={isActive(pathname, "/") ? "active" : undefined}>
+              <Link href="/" className={isActive(pathname, "/") ? "active" : undefined} onClick={closeMobileNav}>
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className={isActive(pathname, "/about") ? "active" : undefined}>
+              <Link href="/about" className={isActive(pathname, "/about") ? "active" : undefined} onClick={closeMobileNav}>
                 About
               </Link>
             </li>
@@ -91,18 +136,27 @@ export default function NavBar() {
               <Link
                 href="/team"
                 className={isActive(pathname, "/team") ? "active" : undefined}
+                onClick={closeMobileNav}
               >
                 Team
               </Link>
             </li>
             <li className="dropdown">
-              <a href="#" className={servicePagesActive ? "active" : undefined}>
+              <a
+                href="#"
+                className={servicePagesActive || openDropdowns.services ? "active" : undefined}
+                onClick={(event) => toggleDropdown(event, "services")}
+              >
                 <span>Services</span> <i className="bi bi-chevron-down toggle-dropdown" />
               </a>
-              <ul>
+              <ul className={openDropdowns.services ? "dropdown-active" : undefined}>
                 {servicePages.map((item) => (
                   <li key={item.href}>
-                    <Link href={item.href} className={isActive(pathname, item.href) ? "active" : undefined}>
+                    <Link
+                      href={item.href}
+                      className={isActive(pathname, item.href) ? "active" : undefined}
+                      onClick={closeMobileNav}
+                    >
                       {item.label}
                     </Link>
                   </li>
@@ -123,18 +177,26 @@ export default function NavBar() {
               </Link>
             </li> */}
             <li>
-              <Link href="/contact" className={isActive(pathname, "/contact") ? "active" : undefined}>
+              <Link href="/contact" className={isActive(pathname, "/contact") ? "active" : undefined} onClick={closeMobileNav}>
                 Contact
               </Link>
             </li>
             <li className="dropdown more-dropdown">
-              <a href="#" className={morePagesActive ? "active" : undefined}>
+              <a
+                href="#"
+                className={morePagesActive || openDropdowns.more ? "active" : undefined}
+                onClick={(event) => toggleDropdown(event, "more")}
+              >
                 <span>&bull;&bull;&bull;</span> <i className="bi bi-chevron-down toggle-dropdown" />
               </a>
-              <ul>
+              <ul className={openDropdowns.more ? "dropdown-active" : undefined}>
                 {morePages.map((item) => (
                   <li key={item.href}>
-                    <Link href={item.href} className={isActive(pathname, item.href) ? "active" : undefined}>
+                    <Link
+                      href={item.href}
+                      className={isActive(pathname, item.href) ? "active" : undefined}
+                      onClick={closeMobileNav}
+                    >
                       {item.label}
                     </Link>
                   </li>
@@ -142,12 +204,19 @@ export default function NavBar() {
               </ul>
             </li>
             <li className={`quote-nav-item${showQuoteButton ? " is-visible" : ""}`}>
-              <a href="#quote" className="quote-nav-button" data-quote-modal-trigger>
+              <a href="#quote" className="quote-nav-button" data-quote-modal-trigger onClick={closeMobileNav}>
                 Get a Quote
               </a>
             </li>
           </ul>
-          <i className="mobile-nav-toggle d-xl-none bi bi-list" />
+          <button
+            type="button"
+            className={`mobile-nav-toggle d-xl-none bi ${isMobileNavOpen ? "bi-x" : "bi-list"}`}
+            aria-label={isMobileNavOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isMobileNavOpen}
+            aria-controls="navmenu"
+            onClick={() => setIsMobileNavOpen((current) => !current)}
+          />
         </nav>
       </div>
     </div>

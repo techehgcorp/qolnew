@@ -269,7 +269,7 @@ export default function DepartmentDetailsPage() {
                           <i className="bi bi-telephone" />
                           <div>
                             <span className="contact-label">Medicare Support</span>
-                            <span className="contact-value">+1 (555) 234-5678</span>
+                            <a href="tel:+15552345678" className="contact-value">+1 (555) 234-5678</a>
                           </div>
                         </div>
                         <div className="contact-item">

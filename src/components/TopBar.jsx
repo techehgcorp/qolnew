@@ -7,21 +7,27 @@ export default function TopBar() {
             <a href="mailto:contact@example.com">info@qolinsurance.com</a>
           </i>
           <i className="bi bi-phone d-flex align-items-center ms-4">
-            <span>+(844) 730-0124</span>
+            <a href="tel:+18447300124">+(844) 730-0124</a>
           </i>
         </div>
         <div className="social-links d-none d-md-flex align-items-center">
-          <a href="#!" className="twitter">
-            <i className="bi bi-twitter-x" />
-          </a>
-          <a href="#!" className="facebook">
+          <a
+            href="https://www.facebook.com/share/1EaXxabHD4/?mibextid=wwXIfr"
+            className="facebook"
+            aria-label="QoL Insurance on Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="bi bi-facebook" />
           </a>
-          <a href="#!" className="instagram">
+          <a
+            href="https://www.instagram.com/qol_insurance?igsh=MTEwMDg2ZXBjcGp1NA%3D%3D&utm_source=qr"
+            className="instagram"
+            aria-label="QoL Insurance on Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="bi bi-instagram" />
-          </a>
-          <a href="#!" className="linkedin">
-            <i className="bi bi-linkedin" />
           </a>
         </div>
       </div>
