@@ -18,7 +18,7 @@ export default function HomePage() {
                     data-aos="fade-right"
                     data-aos-delay={400}
                 >
-                    QoL Insurance helps individuals, families, and seniors compare plans, understand benefits, and access dependable support for everyday healthcare needs.
+                    QOL Insurance helps individuals, families, and seniors compare plans, understand benefits, and access dependable support for everyday healthcare needs.
                 </p>
                 {/* <div
                     className="hero-stats mb-4"
@@ -131,17 +131,20 @@ export default function HomePage() {
                     Trusted Coverage for Every Stage of Life
                 </h2>
                 <p className="lead-text">
-                    For over seventeen years, we've helped individuals, families,
-                    and seniors find health insurance solutions that balance
-                    protection, flexibility, and affordability.
+                    At QOL Insurance, we understand that behind every policy is a family, a dream, and a
+                    future worth protecting. That's why we're deeply committed to providing you with
+                    insurance solutions that offer more than just coverage—they bring comfort, security, and
+                    the peace of mind you deserve. Let us simplify the process for you, so you can focus on
+                    what truly matters: living your life with confidence and knowing we've got your back
+                    every step of the way.
                 </p>
-                <p>
+                {/* <p>
                     Our licensed advisors walk you through health, life, dental,
                     vision, and Medicare options with clear guidance. From
                     comparing premiums and benefits to understanding provider
                     access and prescription coverage, we make plan selection
                     simpler and more confident.
-                </p>
+                </p> */}
                 <div className="stats-grid">
                     <div className="stat-item">
                     <div
@@ -156,7 +159,7 @@ export default function HomePage() {
                     <div
                         className="stat-number purecounter"
                         data-purecounter-start={0}
-                        data-purecounter-end={17}
+                        data-purecounter-end={5}
                         data-purecounter-duration={1}
                     />
                     <div className="stat-label">Years of Excellence</div>
@@ -703,11 +706,10 @@ export default function HomePage() {
                     <div className="feature-icon">
                     <i className="bi bi-shield-check" />
                     </div>
-                    <h3>Advanced Technology</h3>
+                    <h3>Fast and Reliable Services</h3>
                     <p>
-                    We use modern tools and plan-comparison resources to help
-                    members review coverage, estimate costs, and choose options
-                    that fit their healthcare needs with confidence.
+                        Our streamlined processes make getting coverage quick and hassle-free, so you can
+                        focus on what matters most
                     </p>
                 </div>
                 </div>
@@ -720,11 +722,10 @@ export default function HomePage() {
                     <div className="feature-icon">
                     <i className="bi bi-clock" />
                     </div>
-                    <h3>24/7 Availability</h3>
+                    <h3>Personalized Policy Options</h3>
                     <p>
-                    Our support team is available when questions come up about
-                    benefits, renewals, provider access, or urgent coverage
-                    concerns, so members are never left navigating alone.
+                        We offer flexible policy options that let you customize coverage to align perfectly with
+                        your lifestyle and goals
                     </p>
                 </div>
                 </div>

@@ -117,9 +117,9 @@ export default function Footer() {
               </div>
 
               <div className="col-12">
-                <div className="credits">
+                {/* <div className="credits">
                   Designed by <a href="https://www.ehgcorp.com/">EHGCorp</a>.
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

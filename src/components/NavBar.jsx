@@ -10,10 +10,10 @@ const servicePages = [
 ];
 
 const morePages = [
-  { href: "/department-details", label: "Department Details" },
+  // { href: "/department-details", label: "Department Details" },
   { href: "/testimonials", label: "Testimonials" },
   { href: "/faq", label: "Frequently Asked Questions" },
-  { href: "/gallery", label: "Gallery" },
+  // { href: "/gallery", label: "Gallery" },
   { href: "/terms", label: "Terms" },
   { href: "/privacy", label: "Privacy" },
   // { href: "/404", label: "404" },

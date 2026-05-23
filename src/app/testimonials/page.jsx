@@ -64,7 +64,7 @@ export default function TestimonialsPage() {
                           <h4>
                             Marcus Chen <i className="bi bi-patch-check-fill" />
                           </h4>
-                          <span>@marcuschen</span>
+                          {/* <span>@marcuschen</span> */}
                         </div>
                       </div>
                     </div>
@@ -224,7 +224,7 @@ export default function TestimonialsPage() {
                           <h4>
                             Sophia Lee <i className="bi bi-patch-check-fill" />
                           </h4>
-                          <span>@sophialee</span>
+                          {/* <span>@sophialee</span> */}
                         </div>
                       </div>
                     </div>
@@ -263,7 +263,7 @@ export default function TestimonialsPage() {
                         />
                         <div>
                           <h5>Michael Anderson</h5>
-                          <span>Software Developer</span>
+                          {/* <span>Software Developer</span> */}
                         </div>
                       </div>
                       <div className="quote-icon">
@@ -297,7 +297,7 @@ export default function TestimonialsPage() {
                         />
                         <div>
                           <h5>Sophia Martinez</h5>
-                          <span>Marketing Specialist</span>
+                          {/* <span>Marketing Specialist</span> */}
                         </div>
                       </div>
                       <div className="quote-icon">
@@ -331,7 +331,7 @@ export default function TestimonialsPage() {
                         />
                         <div>
                           <h5>David Wilson</h5>
-                          <span>Graphic Designer</span>
+                          {/* <span>Graphic Designer</span> */}
                         </div>
                       </div>
                       <div className="quote-icon">
@@ -365,7 +365,7 @@ export default function TestimonialsPage() {
                         />
                         <div>
                           <h5>Emily Johnson</h5>
-                          <span>UX Designer</span>
+                          {/* <span>UX Designer</span> */}
                         </div>
                       </div>
                       <div className="quote-icon">
@@ -399,7 +399,7 @@ export default function TestimonialsPage() {
                         />
                         <div>
                           <h5>Olivia Thompson</h5>
-                          <span>Entrepreneur</span>
+                          {/* <span>Entrepreneur</span> */}
                         </div>
                       </div>
                       <div className="quote-icon">
@@ -433,7 +433,7 @@ export default function TestimonialsPage() {
                         />
                         <div>
                           <h5>James Taylor</h5>
-                          <span>Financial Analyst</span>
+                          {/* <span>Financial Analyst</span> */}
                         </div>
                       </div>
                       <div className="quote-icon">

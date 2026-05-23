@@ -324,7 +324,7 @@ export default function ServiceDetailsPage() {
                           <div className="col-lg-4 order-lg-2">
                             <div className="department-image">
                               <img
-                                src="assets/img/health/dermatology-1.webp"
+                                src="assets/img/health/Dental3.png"
                                 alt="Dental coverage"
                                 className="img-fluid"
                               />
@@ -417,7 +417,7 @@ export default function ServiceDetailsPage() {
                           <div className="col-lg-4 order-lg-2">
                             <div className="department-image">
                               <img
-                                src="assets/img/health/pediatrics-4.webp"
+                                src="assets/img/health/vision.png"
                                 alt="Vision coverage"
                                 className="img-fluid"
                               />
@@ -665,7 +665,7 @@ export default function ServiceDetailsPage() {
                 <div className="col-lg-7" data-aos="fade-left" data-aos-delay={300}>
                   <div className="service-visual">
                     <img
-                      src="assets/img/health/neurology-2.webp"
+                      src="assets/img/health/plan1.png"
                       alt="Health insurance support"
                       className="img-fluid"
                     />
