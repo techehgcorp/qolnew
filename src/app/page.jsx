@@ -71,7 +71,7 @@ export default function HomePage() {
                     Get a Free Quote
                     </a>
                     <a
-                    href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+                    href="#"
                     className="btn btn-outline glightbox"
                     >
                     <i className="bi bi-play-circle me-2" />
@@ -203,7 +203,7 @@ export default function HomePage() {
                 </div>
                 <div className="experience-badge">
                     <div className="badge-content">
-                    <span className="years">17+</span>
+                    <span className="years">5+</span>
                     <span className="text">Years of Trusted Health Insurance</span>
                     </div>
                 </div>
