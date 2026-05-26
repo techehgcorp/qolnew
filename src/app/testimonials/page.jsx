@@ -54,12 +54,12 @@ export default function TestimonialsPage() {
                         options in a way that finally made sense.
                       </p>
                       <div className="profile">
-                        <img
+                        {/* <img
                           src="assets/img/person/person-m-9.webp"
                           className="testimonial-img"
                           alt=""
                           loading="lazy"
-                        />
+                        /> */}
                         <div className="info">
                           <h4>
                             Marcus Chen <i className="bi bi-patch-check-fill" />
@@ -86,12 +86,12 @@ export default function TestimonialsPage() {
                         choose something that fit my doctors and budget.
                       </p>
                       <div className="profile">
-                        <img
+                        {/* <img
                           src="assets/img/person/person-f-5.webp"
                           className="testimonial-img"
                           alt=""
                           loading="lazy"
-                        />
+                        /> */}
                         <div className="info">
                           <h4>
                             Sarah Mitchell <i className="bi bi-patch-check-fill" />
@@ -118,12 +118,12 @@ export default function TestimonialsPage() {
                         process feel organized instead of stressful.
                       </p>
                       <div className="profile">
-                        <img
+                        {/* <img
                           src="assets/img/person/person-f-12.webp"
                           className="testimonial-img"
                           alt=""
                           loading="lazy"
-                        />
+                        /> */}
                         <div className="info">
                           <h4>
                             James Wilson <i className="bi bi-patch-check-fill" />
@@ -150,12 +150,12 @@ export default function TestimonialsPage() {
                         benefits we did not need.
                       </p>
                       <div className="profile">
-                        <img
+                        {/* <img
                           src="assets/img/person/person-m-12.webp"
                           className="testimonial-img"
                           alt=""
                           loading="lazy"
-                        />
+                        /> */}
                         <div className="info">
                           <h4>
                             Emma Rodriguez <i className="bi bi-patch-check-fill" />
@@ -182,12 +182,12 @@ export default function TestimonialsPage() {
                         that helped me make a smart decision for my family.
                       </p>
                       <div className="profile">
-                        <img
+                        {/* <img
                           src="assets/img/person/person-m-13.webp"
                           className="testimonial-img"
                           alt=""
                           loading="lazy"
-                        />
+                        /> */}
                         <div className="info">
                           <h4>
                             David Kumar <i className="bi bi-patch-check-fill" />
@@ -214,12 +214,12 @@ export default function TestimonialsPage() {
                         support is rare and it really stood out.
                       </p>
                       <div className="profile">
-                        <img
+                        {/* <img
                           src="assets/img/person/person-f-13.webp"
                           className="testimonial-img"
                           alt=""
                           loading="lazy"
-                        />
+                        /> */}
                         <div className="info">
                           <h4>
                             Sophia Lee <i className="bi bi-patch-check-fill" />
@@ -255,12 +255,12 @@ export default function TestimonialsPage() {
                     </p>
                     <div className="testimonial-footer">
                       <div className="testimonial-author">
-                        <img
+                        {/* <img
                           src="assets/img/person/person-m-3.webp"
                           alt="Author"
                           className="img-fluid rounded-circle"
                           loading="lazy"
-                        />
+                        /> */}
                         <div>
                           <h5>Michael Anderson</h5>
                           {/* <span>Software Developer</span> */}
@@ -289,12 +289,12 @@ export default function TestimonialsPage() {
                     </p>
                     <div className="testimonial-footer">
                       <div className="testimonial-author">
-                        <img
+                        {/* <img
                           src="assets/img/person/person-f-5.webp"
                           alt="Author"
                           className="img-fluid rounded-circle"
                           loading="lazy"
-                        />
+                        /> */}
                         <div>
                           <h5>Sophia Martinez</h5>
                           {/* <span>Marketing Specialist</span> */}
@@ -323,12 +323,12 @@ export default function TestimonialsPage() {
                     </p>
                     <div className="testimonial-footer">
                       <div className="testimonial-author">
-                        <img
+                        {/* <img
                           src="assets/img/person/person-m-7.webp"
                           alt="Author"
                           className="img-fluid rounded-circle"
                           loading="lazy"
-                        />
+                        /> */}
                         <div>
                           <h5>David Wilson</h5>
                           {/* <span>Graphic Designer</span> */}
@@ -357,12 +357,12 @@ export default function TestimonialsPage() {
                     </p>
                     <div className="testimonial-footer">
                       <div className="testimonial-author">
-                        <img
+                        {/* <img
                           src="assets/img/person/person-f-9.webp"
                           alt="Author"
                           className="img-fluid rounded-circle"
                           loading="lazy"
-                        />
+                        /> */}
                         <div>
                           <h5>Emily Johnson</h5>
                           {/* <span>UX Designer</span> */}
@@ -391,12 +391,12 @@ export default function TestimonialsPage() {
                     </p>
                     <div className="testimonial-footer">
                       <div className="testimonial-author">
-                        <img
+                        {/* <img
                           src="assets/img/person/person-f-11.webp"
                           alt="Author"
                           className="img-fluid rounded-circle"
                           loading="lazy"
-                        />
+                        /> */}
                         <div>
                           <h5>Olivia Thompson</h5>
                           {/* <span>Entrepreneur</span> */}
@@ -425,12 +425,12 @@ export default function TestimonialsPage() {
                     </p>
                     <div className="testimonial-footer">
                       <div className="testimonial-author">
-                        <img
+                        {/* <img
                           src="assets/img/person/person-m-12.webp"
                           alt="Author"
                           className="img-fluid rounded-circle"
                           loading="lazy"
-                        />
+                        /> */}
                         <div>
                           <h5>James Taylor</h5>
                           {/* <span>Financial Analyst</span> */}
