@@ -96,7 +96,7 @@ export default function AboutPage() {
               >
                 <div className="image-wrapper">
                   <img
-                    src="assets/img/health/facilities-6.webp"
+                    src="assets/img/health/facilities-6.png"
                     className="img-fluid main-image"
                     alt="Insurance support office"
                   />

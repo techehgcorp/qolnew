@@ -240,6 +240,44 @@ export default function ServicesPage() {
                     <div className="service-image">
                       <img
                         src="assets/img/service/service5.png"
+                        alt="Final expense insurance planning"
+                        className="img-fluid"
+                      />
+                      <div className="service-overlay">
+                        <i className="fas fa-hand-holding-heart" />
+                      </div>
+                    </div>
+                    <div className="service-content">
+                      <h3>Final Expense</h3>
+                      <p>
+                        Plan ahead for funeral costs, burial expenses, and other
+                        end-of-life needs with coverage designed to ease the
+                        financial burden on loved ones.
+                      </p>
+                      <div className="service-features">
+                        <span className="feature-item">
+                          <i className="fas fa-check" /> Funeral Costs
+                        </span>
+                        <span className="feature-item">
+                          <i className="fas fa-check" /> Family Support
+                        </span>
+                      </div>
+                      <Link href="/service-details?tab=departments-tabs-final-expense#departments-tabs" className="service-btn">
+                        <span>Learn More</span>
+                        <i className="fas fa-arrow-right" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="col-lg-4 col-md-6"
+                  data-aos="fade-up"
+                  data-aos-delay={450}
+                >
+                  <div className="service-item">
+                    <div className="service-image">
+                      <img
+                        src="assets/img/service/service5.png"
                         alt="Claims and member support"
                         className="img-fluid"
                       />

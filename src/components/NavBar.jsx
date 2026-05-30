@@ -19,6 +19,12 @@ const morePages = [
   // { href: "/404", label: "404" },
 ];
 
+const selfEnrollmentPages = [
+  { href: "/self-enrollment/one-share", label: "One Share" },
+  { href: "/self-enrollment/ameritas", label: "Ameritas" },
+  { href: "/self-enrollment/ncd", label: "NCD" },
+];
+
 function isActive(pathname, href) {
   if (href === "/") {
     return pathname === "/";
@@ -34,6 +40,7 @@ export default function NavBar() {
   const [openDropdowns, setOpenDropdowns] = useState({});
   const servicePagesActive = servicePages.some((item) => isActive(pathname, item.href));
   const morePagesActive = morePages.some((item) => isActive(pathname, item.href));
+  const selfEnrollmentPagesActive = selfEnrollmentPages.some((item) => isActive(pathname, item.href));
 
   const closeMobileNav = () => {
     setIsMobileNavOpen(false);
@@ -163,6 +170,28 @@ export default function NavBar() {
                 ))}
               </ul>
             </li>
+            <li className="dropdown">
+              <a
+                href="#"
+                className={selfEnrollmentPagesActive || openDropdowns.selfEnrollment ? "active" : undefined}
+                onClick={(event) => toggleDropdown(event, "selfEnrollment")}
+              >
+                <span>Self Enrollment</span> <i className="bi bi-chevron-down toggle-dropdown" />
+              </a>
+              <ul className={openDropdowns.selfEnrollment ? "dropdown-active" : undefined}>
+                {selfEnrollmentPages.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className={isActive(pathname, item.href) ? "active" : undefined}
+                      onClick={closeMobileNav}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
             {/* <li>
               <Link href="/doctors" className={isActive(pathname, "/doctors") ? "active" : undefined}>
                 Doctors
@@ -203,6 +232,7 @@ export default function NavBar() {
                 ))}
               </ul>
             </li>
+            
             <li className={`quote-nav-item${showQuoteButton ? " is-visible" : ""}`}>
               <a href="#quote" className="quote-nav-button" data-quote-modal-trigger onClick={closeMobileNav}>
                 Get a Quote

@@ -79,6 +79,19 @@ export default function ServiceDetailsPage() {
                         </a>
                         <a
                           className="nav-link department-tab"
+                          id="final-expense-tab"
+                          data-bs-toggle="pill"
+                          href="#departments-tabs-final-expense"
+                          role="tab"
+                          aria-controls="departments-tabs-final-expense"
+                          aria-selected="false"
+                          data-aos="fade-up"
+                          data-aos-delay={200}
+                        >
+                          Final Expense
+                        </a>
+                        <a
+                          className="nav-link department-tab"
                           id="dental-tab"
                           data-bs-toggle="pill"
                           href="#departments-tabs-dental"
@@ -86,7 +99,7 @@ export default function ServiceDetailsPage() {
                           aria-controls="departments-tabs-dental"
                           aria-selected="false"
                           data-aos="fade-up"
-                          data-aos-delay={200}
+                          data-aos-delay={250}
                         >
                           Dental
                         </a>
@@ -99,7 +112,7 @@ export default function ServiceDetailsPage() {
                           aria-controls="departments-tabs-ophthalmology"
                           aria-selected="false"
                           data-aos="fade-up"
-                          data-aos-delay={250}
+                          data-aos-delay={300}
                         >
                           Vision
                         </a>
@@ -112,7 +125,7 @@ export default function ServiceDetailsPage() {
                           aria-controls="departments-tabs-cardiology"
                           aria-selected="false"
                           data-aos="fade-up"
-                          data-aos-delay={300}
+                          data-aos-delay={350}
                         >
                           Medicare
                         </a>
@@ -314,6 +327,100 @@ export default function ServiceDetailsPage() {
                         </div>
                       </div>
                       {/* End Surgery Tab */}
+                      <div
+                        className="tab-pane fade"
+                        id="departments-tabs-final-expense"
+                        role="tabpanel"
+                        aria-labelledby="final-expense-tab"
+                      >
+                        <div className="row department-layout">
+                          <div className="col-lg-4 order-lg-2">
+                            <div className="department-image">
+                              <img
+                                src="assets/img/health/Life Insurance.png"
+                                alt="Final expense insurance planning"
+                                className="img-fluid"
+                              />
+                            </div>
+                          </div>
+                          <div className="col-lg-8 order-lg-1">
+                            <div className="department-info">
+                              <h2 className="department-title">
+                                Final Expense Planning
+                              </h2>
+                              <p className="department-description">
+                                Final expense coverage helps families prepare for
+                                funeral costs, burial expenses, and other
+                                end-of-life needs with straightforward benefits
+                                designed for peace of mind.
+                              </p>
+                              <div className="row mt-4">
+                                <div className="col-md-6">
+                                  <div className="service-item">
+                                    <div className="service-icon">
+                                      <i className="fas fa-file-invoice-dollar" />
+                                    </div>
+                                    <div className="service-content">
+                                      <h4>Funeral Cost Planning</h4>
+                                      <p>
+                                        Review coverage amounts that can help with
+                                        funeral services, burial costs,
+                                        cremation, and related arrangements.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="col-md-6">
+                                  <div className="service-item">
+                                    <div className="service-icon">
+                                      <i className="fas fa-hand-holding-heart" />
+                                    </div>
+                                    <div className="service-content">
+                                      <h4>Family Support</h4>
+                                      <p>
+                                        Choose benefits that can reduce financial
+                                        pressure on loved ones during a difficult
+                                        time.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="col-md-6">
+                                  <div className="service-item">
+                                    <div className="service-icon">
+                                      <i className="fas fa-clipboard-check" />
+                                    </div>
+                                    <div className="service-content">
+                                      <h4>Simplified Options</h4>
+                                      <p>
+                                        Compare plans with easier application
+                                        steps, predictable premiums, and benefit
+                                        levels matched to your goals.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="col-md-6">
+                                  <div className="service-item">
+                                    <div className="service-icon">
+                                      <i className="fas fa-shield-alt" />
+                                    </div>
+                                    <div className="service-content">
+                                      <h4>Legacy Protection</h4>
+                                      <p>
+                                        Coordinate final expense coverage with
+                                        broader life insurance needs so your plan
+                                        feels complete.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      {/* End Final Expense Tab */}
                       <div
                         className="tab-pane fade"
                         id="departments-tabs-dental"
@@ -720,6 +827,7 @@ export default function ServiceDetailsPage() {
                           <div className="condition-tags">
                             <span className="tag">Health Insurance</span>
                             <span className="tag">Life Insurance</span>
+                            <span className="tag">Final Expense</span>
                             <span className="tag">Dental Plans</span>
                             <span className="tag">Vision Benefits</span>
                             <span className="tag">Medicare Options</span>

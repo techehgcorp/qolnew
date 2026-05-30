@@ -1,4 +1,5 @@
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
 export default function HomePage() {
   return (
@@ -11,15 +12,14 @@ export default function HomePage() {
             <div className="col-lg-6 mt-5">
                 <div className="hero-content">
                 <h1 data-aos="fade-right" data-aos-delay={300}>
-                    Excellence in <br/><span className="highlight">Health Insurance</span>
+                    South Florida <br/><span className="highlight">Insurance Agency</span>
                 </h1>
                 <p
                     className="hero-description"
                     data-aos="fade-right"
                     data-aos-delay={400}
                 >
-                    QOL Insurance helps individuals, families, and seniors compare plans, understand benefits, and access dependable support for everyday healthcare needs.
-                </p>
+                    QOL Insurance helps individuals, families, and seniors compare life, health, Medicare, dental, vision, final-expense, and accident plans with licensed support.                </p>
                 {/* <div
                     className="hero-stats mb-4"
                     data-aos="fade-right"
@@ -68,14 +68,14 @@ export default function HomePage() {
                     data-aos-delay={600}
                 >
                     <a href="#quote" className="btn btn-primary" data-quote-modal-trigger>
-                    Get a Free Quote
+                    Get a Free Quote<br />Talk to an Agent
                     </a>
                     <a
                     href="#"
                     className="btn btn-outline glightbox"
                     >
                     <i className="bi bi-play-circle me-2" />
-                    Watch Our Story
+                    Take out watch our story
                     </a>
                 </div>
                 {/* <div
@@ -128,15 +128,10 @@ export default function HomePage() {
             >
                 <div className="about-content">
                 <h2 className="section-heading">
-                    Trusted Coverage for Every Stage of Life
+                    Trusted Insurance Coverage for Every Stage of Life
                 </h2>
                 <p className="lead-text">
-                    At QOL Insurance, we understand that behind every policy is a family, a dream, and a
-                    future worth protecting. That's why we're deeply committed to providing you with
-                    insurance solutions that offer more than just coverage—they bring comfort, security, and
-                    the peace of mind you deserve. Let us simplify the process for you, so you can focus on
-                    what truly matters: living your life with confidence and knowing we've got your back
-                    every step of the way.
+                    At QOL Insurance, we help individuals, families, and seniors compare coverage for life, health, Medicare, dental, vision, final-expense and accident insurance. Based in South Florida, our licensed agents work with multiple carriers to help you understand your options and choose protection that fits your needs, budget, and future.
                 </p>
                 {/* <p>
                     Our licensed advisors walk you through health, life, dental,
@@ -150,10 +145,10 @@ export default function HomePage() {
                     <div
                         className="stat-number purecounter"
                         data-purecounter-start={0}
-                        data-purecounter-end={15000}
+                        data-purecounter-end={10000}
                         data-purecounter-duration={1}
                     />
-                    <div className="stat-label">Members Supported</div>
+                    <div className="stat-label">Clients Helped</div>
                     </div>
                     <div className="stat-item">
                     <div
@@ -162,7 +157,7 @@ export default function HomePage() {
                         data-purecounter-end={5}
                         data-purecounter-duration={1}
                     />
-                    <div className="stat-label">Years of Excellence</div>
+                    <div className="stat-label">Years of Licensed Support</div>
                     </div>
                     <div className="stat-item">
                     <div
@@ -171,12 +166,12 @@ export default function HomePage() {
                         data-purecounter-end={50}
                         data-purecounter-duration={1}
                     />
-                    <div className="stat-label">Coverage Options</div>
+                    <div className="stat-label">Plan Options Compared</div>
                     </div>
                 </div>
                 <div className="cta-section">
                     <a href="/about" className="btn-primary">
-                    Learn More About Us
+                    Learn More About QOL
                     </a>
                 </div>
                 </div>
@@ -185,7 +180,7 @@ export default function HomePage() {
                 <div className="about-visual">
                 <div className="main-image">
                     <img
-                    src="assets/img/health/facilities-9.webp"
+                    src="assets/img/health/facilities-9.png"
                     alt="Family insurance guidance"
                     className="img-fluid"
                     />
@@ -196,15 +191,15 @@ export default function HomePage() {
                         <i className="bi bi-heart-pulse" />
                     </div>
                     <div className="card-text">
-                        <h4>Get Your Family Covered</h4>
-                        <p>Protection for the people who matter most.</p>
+                        <h4>Protect What Matters Most</h4>
+                        <p>Coverage options for every stage of life.</p>
                     </div>
                     </div>
                 </div>
                 <div className="experience-badge">
                     <div className="badge-content">
                     <span className="years">5+</span>
-                    <span className="text">Years of Trusted Health Insurance</span>
+                    <span className="text">Years of Trusted Insurance Support</span>
                     </div>
                 </div>
                 </div>
@@ -213,6 +208,57 @@ export default function HomePage() {
         </div>
         </section>
         {/* /Home About Section */}
+        {/* Self Enrollment Section */}
+        <section id="self-enrollment" className="home-self-enrollment section">
+        <div className="container" data-aos="fade-up" data-aos-delay={100}>
+            <div className="section-title">
+            <h2>Self Enrollment</h2>
+            <p>
+                Start directly with our partner enrollment pages for fast dental,
+                vision, and health coverage quote options.
+            </p>
+            </div>
+            <div className="row g-4 justify-content-center">
+            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay={150}>
+                <Link href="https://enroll.onesharehealth.com/home?context=U2FsdGVkX1-Xe2E4vedDJFBQEwTKizLDGrO6vBA_vz927CUE6JRJ71aOQ5Nm_ySh0eKQ790nd5Rf-8KUKvqwXLR6iq-ELe9J_fzecrg4b1_0RaLn6_VJZD3SwREjM51_" className="self-enrollment-partner">
+                <img
+                    src="/assets/img/partners/oneshare-logo.svg"
+                    alt="One Share"
+                    className="img-fluid"
+                />
+                <span>
+                    One Share <i className="bi bi-arrow-right" />
+                </span>
+                </Link>
+            </div>
+            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay={200}>
+                <Link href="https://myplan.ameritas.com/id/010z1711" className="self-enrollment-partner">
+                <img
+                    src="/assets/img/partners/ameritas-logo.png"
+                    alt="Ameritas"
+                    className="img-fluid"
+                />
+                <span>
+                    Ameritas <i className="bi bi-arrow-right" />
+                </span>
+                </Link>
+            </div>
+            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay={250}>
+                <Link href="https://enrollment.ncd.com/880978" className="self-enrollment-partner">
+                <img
+                    src="/assets/img/partners/ncd-logo.svg"
+                    alt="NCD"
+                    className="img-fluid"
+                />
+                <span>
+                    NCD <i className="bi bi-arrow-right" />
+                </span>
+                </Link>
+            </div>
+            </div>
+        </div>
+        </section>
+        {/* /Self Enrollment Section */}
         {/* Featured Departments Section */}
         <section id="featured-departments" className="featured-departments section">
         {/* Section Title */}
@@ -254,7 +300,7 @@ export default function HomePage() {
                 </div>
                 <div className="specialty-visual">
                     <img
-                    src="assets/img/health/cardiology-1.webp"
+                    src="assets/img/health/cardiology-1.png"
                     alt="Medicare coverage guidance"
                     className="img-fluid"
                     />
@@ -293,7 +339,7 @@ export default function HomePage() {
                 </div>
                 <div className="specialty-visual">
                     <img
-                    src="assets/img/health/neurology-4.webp"
+                    src="assets/img/health/neurology-4.png"
                     alt="Health insurance plans"
                     className="img-fluid"
                     />
