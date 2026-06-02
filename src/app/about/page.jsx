@@ -214,11 +214,11 @@ export default function AboutPage() {
               </div>
               <div className="row justify-content-center">
                 <div
-                  className="col-lg-3 col-md-4 col-sm-6 col-8 mx-auto"
+                  className="col-lg-2 col-md-3 col-sm-5 col-7 mx-auto"
                   data-aos="zoom-in"
                   data-aos-delay={100}
                 >
-                  <div className="certification-item">
+                  <div className="certification-item florida-blue-certification">
                     <img
                       src="/assets/img/clients/client-5.png"
                       className="img-fluid"

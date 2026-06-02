@@ -804,6 +804,19 @@ body.quote-modal-open {
   background: #ffffff;
 }
 
+.about .certifications-section .florida-blue-certification {
+  width: min(100%, 300px);
+  height: 96px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 1.25rem;
+}
+
+.about .certifications-section .florida-blue-certification img {
+  max-height: 96px;
+  max-width: 240px;
+}
+
 .iul-hero {
   padding-top: 80px;
 }
