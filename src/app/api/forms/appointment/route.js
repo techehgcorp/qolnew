@@ -1,22 +1,47 @@
 export async function POST(request) {
-  const formData = await request.formData();
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const phone = formData.get("phone");
-  const message = formData.get("message");
+  const contentType = request.headers.get("content-type") || "";
+  const data = contentType.includes("application/json")
+    ? await request.json()
+    : Object.fromEntries((await request.formData()).entries());
 
-  if (!name || !email || !phone || !message) {
-    return new Response("Missing required fields.", {
-      status: 400,
-      headers: {
-        "content-type": "text/plain; charset=utf-8",
-      },
-    });
+  const requiredFields = [
+    "appointmentDate",
+    "appointmentTime",
+    "firstName",
+    "lastName",
+    "email",
+    "phone",
+    "contactMethod",
+  ];
+  const missingField = requiredFields.find((field) => !data?.[field]);
+
+  if (missingField) {
+    return Response.json(
+      { error: "Missing required fields." },
+      {
+        status: 400,
+      }
+    );
   }
 
-  return new Response("OK", {
-    headers: {
-      "content-type": "text/plain; charset=utf-8",
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+    return Response.json(
+      { error: "Please enter a valid email address." },
+      {
+        status: 400,
+      }
+    );
+  }
+
+  return Response.json(
+    {
+      message: "Appointment request received.",
     },
-  });
+    {
+      status: 200,
+      headers: {
+        "content-type": "application/json; charset=utf-8",
+      },
+    }
+  );
 }

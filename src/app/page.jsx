@@ -101,7 +101,7 @@ export default function HomePage() {
                 >
                 <div className="main-image">
                     <img
-                    src="assets/img/health/staff-612.png"
+                    src="/assets/img/health/staff-612.png"
                     alt="Insurance advisor support"
                     className="img-fluid"
                     />
@@ -180,7 +180,7 @@ export default function HomePage() {
                 <div className="about-visual">
                 <div className="main-image">
                     <img
-                    src="assets/img/health/facilities-9.png"
+                    src="/assets/img/health/facilities-9.png"
                     alt="Family insurance guidance"
                     className="img-fluid"
                     />
@@ -300,7 +300,7 @@ export default function HomePage() {
                 </div>
                 <div className="specialty-visual">
                     <img
-                    src="assets/img/health/cardiology-1.png"
+                    src="/assets/img/health/cardiology-1.png"
                     alt="Medicare coverage guidance"
                     className="img-fluid"
                     />
@@ -339,7 +339,7 @@ export default function HomePage() {
                 </div>
                 <div className="specialty-visual">
                     <img
-                    src="assets/img/health/neurology-4.png"
+                    src="/assets/img/health/neurology-4.png"
                     alt="Health insurance plans"
                     className="img-fluid"
                     />
@@ -377,7 +377,7 @@ export default function HomePage() {
                 </div>
                 <div className="specialty-visual">
                     <img
-                    src="assets/img/health/Life Insurance.png"
+                    src="/assets/img/health/final_expense.png"
                     alt="Life insurance protection"
                     className="img-fluid"
                     />
@@ -415,7 +415,7 @@ export default function HomePage() {
                 </div>
                 <div className="specialty-visual">
                     <img
-                    src="assets/img/health/Dental.png"
+                    src="/assets/img/health/Dental.png"
                     alt="Dental and vision coverage"
                     className="img-fluid"
                     />
@@ -514,11 +514,11 @@ export default function HomePage() {
         </div>
         </section>
         {/* /Featured Departments Section */}
-        {/* Featured Services Section */}
+        {/* Featured Products Section */}
         <section id="featured-services" className="featured-services section">
         {/* Section Title */}
         <div className="container section-title" data-aos="fade-up">
-            <h2>Featured Services</h2>
+            <h2>Featured Products</h2>
             <p>
             Key Features of Our Insurance Solutions
             </p>
@@ -530,7 +530,7 @@ export default function HomePage() {
                 <div className="featured-service-main">
                 <div className="service-image-wrapper">
                     <img
-                    src="assets/img/health/consultation-4.webp"
+                    src="/assets/img/health/consultation-4.webp"
                     alt="Insurance consultation"
                     className="img-fluid"
                     loading="lazy"
@@ -550,8 +550,8 @@ export default function HomePage() {
                     protection with guidance that stays clear from enrollment
                     through ongoing support.
                     </p>
-                    <a href="/services" className="main-cta">
-                    Explore Our Services
+                    <a href="/products" className="main-cta">
+                    Explore Our Products
                     </a>
                 </div>
                 </div>
@@ -628,7 +628,7 @@ export default function HomePage() {
                 <div className="specialty-card">
                     <div className="specialty-image">
                     <img
-                        src="assets/img/health/maternal-2.webp"
+                        src="/assets/img/health/maternal-2.webp"
                         alt="Health insurance support"
                         className="img-fluid"
                         loading="lazy"
@@ -644,7 +644,7 @@ export default function HomePage() {
                 <div className="specialty-card">
                     <div className="specialty-image">
                     <img
-                        src="assets/img/health/vaccination-3.webp"
+                        src="/assets/img/health/vaccination-3.webp"
                         alt="Accident coverage"
                         className="img-fluid"
                         loading="lazy"
@@ -660,7 +660,7 @@ export default function HomePage() {
                 <div className="specialty-card">
                     <div className="specialty-image">
                     <img
-                        src="assets/img/health/emergency-1.webp"
+                        src="/assets/img/health/emergency-1.webp"
                         alt="ACA marketplace plans"
                         className="img-fluid"
                         loading="lazy"
@@ -676,7 +676,7 @@ export default function HomePage() {
                 <div className="specialty-card">
                     <div className="specialty-image">
                     <img
-                        src="assets/img/health/facilities-6.webp"
+                        src="/assets/img/health/facilities-6.webp"
                         alt="Advanced Tech"
                         className="img-fluid"
                         loading="lazy"
@@ -692,7 +692,7 @@ export default function HomePage() {
             </div>
         </div>
         </section>
-        {/* /Featured Services Section */}
+        {/* /Featured Products Section */}
         {/* Find A Doctor Section */}
         
         {/* /Find A Doctor Section */}
@@ -719,8 +719,8 @@ export default function HomePage() {
                         <span>Request a Consultation</span>
                         <i className="bi bi-arrow-right" />
                     </a>
-                    <a href="services.html" className="secondary-cta">
-                        <span>Explore Services</span>
+                    <a href="/products" className="secondary-cta">
+                        <span>Explore Products</span>
                         <i className="bi bi-arrow-right" />
                     </a>
                     </div>
@@ -733,7 +733,7 @@ export default function HomePage() {
                     data-aos-delay={300}
                 >
                     <img
-                    src="assets/img/health/facilities-6.webp"
+                    src="/assets/img/health/facilities-6.webp"
                     alt="Insurance support team"
                     className="img-fluid"
                     />
@@ -752,7 +752,7 @@ export default function HomePage() {
                     <div className="feature-icon">
                     <i className="bi bi-shield-check" />
                     </div>
-                    <h3>Fast and Reliable Services</h3>
+                    <h3>Fast and Reliable Products</h3>
                     <p>
                         Our streamlined processes make getting coverage quick and hassle-free, so you can
                         focus on what matters most

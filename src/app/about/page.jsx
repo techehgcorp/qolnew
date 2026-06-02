@@ -96,7 +96,7 @@ export default function AboutPage() {
               >
                 <div className="image-wrapper">
                   <img
-                    src="assets/img/health/facilities-6.png"
+                    src="/assets/img/health/facilities-6.png"
                     className="img-fluid main-image"
                     alt="Insurance support office"
                   />
@@ -106,7 +106,7 @@ export default function AboutPage() {
                     data-aos-delay={400}
                   >
                     <img
-                      src="assets/img/health/staff-8.webp"
+                      src="/assets/img/health/staff-8.webp"
                       className="img-fluid"
                       alt="Insurance advisors"
                     />
@@ -139,7 +139,7 @@ export default function AboutPage() {
                     <div className="value-icon">
                       <i className="bi bi-heart-pulse" />
                     </div>
-                    <h4>Comprehensive Insurance Services</h4>
+                    <h4>Comprehensive Insurance Products</h4>
                     <p>
                       Delivering clear, thoughtful guidance for each client based
                       on their budget, household, and coverage priorities.
@@ -214,67 +214,15 @@ export default function AboutPage() {
               </div>
               <div className="row justify-content-center">
                 <div
-                  className="col-lg-2 col-md-3 col-sm-4 col-6"
+                  className="col-lg-3 col-md-4 col-sm-6 col-8 mx-auto"
                   data-aos="zoom-in"
                   data-aos-delay={100}
                 >
                   <div className="certification-item">
                     <img
-                      src="assets/img/clients/client-1.png"
+                      src="/assets/img/clients/client-5.png"
                       className="img-fluid"
-                      alt="Insurance certification"
-                    />
-                  </div>
-                </div>
-                <div
-                  className="col-lg-2 col-md-3 col-sm-4 col-6"
-                  data-aos="zoom-in"
-                  data-aos-delay={200}
-                >
-                  <div className="certification-item">
-                    <img
-                      src="assets/img/clients/client-2.png"
-                      className="img-fluid"
-                      alt="Insurance accreditation"
-                    />
-                  </div>
-                </div>
-                <div
-                  className="col-lg-2 col-md-3 col-sm-4 col-6"
-                  data-aos="zoom-in"
-                  data-aos-delay={300}
-                >
-                  <div className="certification-item">
-                    <img
-                      src="assets/img/clients/client-3.png"
-                      className="img-fluid"
-                      alt="Insurance certification"
-                    />
-                  </div>
-                </div>
-                <div
-                  className="col-lg-2 col-md-3 col-sm-4 col-6"
-                  data-aos="zoom-in"
-                  data-aos-delay={400}
-                >
-                  <div className="certification-item">
-                    <img
-                      src="assets/img/clients/client-4.png"
-                      className="img-fluid"
-                      alt="Industry certification"
-                    />
-                  </div>
-                </div>
-                <div
-                  className="col-lg-2 col-md-3 col-sm-4 col-6"
-                  data-aos="zoom-in"
-                  data-aos-delay={500}
-                >
-                  <div className="certification-item">
-                    <img
-                      src="assets/img/clients/client-5.png"
-                      className="img-fluid"
-                      alt="Industry accreditation"
+                      alt="Florida Blue"
                     />
                   </div>
                 </div>

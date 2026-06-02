@@ -315,7 +315,9 @@ h6 {
   }
 
   .navmenu a.quote-nav-button,
-  .navmenu a.quote-nav-button:focus {
+  .navmenu a.quote-nav-button:focus,
+  .navmenu a.appointment-nav-button,
+  .navmenu a.appointment-nav-button:focus {
     min-width: 128px;
     min-height: 42px;
     justify-content: center;
@@ -328,12 +330,15 @@ h6 {
   }
 
   .navmenu a.quote-nav-button:hover,
-  .navmenu a.quote-nav-button:focus:hover {
+  .navmenu a.quote-nav-button:focus:hover,
+  .navmenu a.appointment-nav-button:hover,
+  .navmenu a.appointment-nav-button:focus:hover {
     color: var(--contrast-color);
     background: color-mix(in srgb, var(--bluelogo-color), black 12%);
   }
 
-  .navmenu a.quote-nav-button:before {
+  .navmenu a.quote-nav-button:before,
+  .navmenu a.appointment-nav-button:before {
     display: none;
   }
 
@@ -553,13 +558,20 @@ h6 {
   }
 
   .navmenu a.quote-nav-button,
-  .navmenu a.quote-nav-button:focus {
+  .navmenu a.quote-nav-button:focus,
+  .navmenu a.appointment-nav-button,
+  .navmenu a.appointment-nav-button:focus {
     margin: 10px 20px;
     border-radius: 8px;
     color: var(--contrast-color);
     background: var(--bluelogo-color);
     font-weight: 700;
     justify-content: center;
+  }
+
+  .navmenu a.appointment-nav-button:hover,
+  .navmenu a.appointment-nav-button:focus:hover {
+    color: var(--contrast-color);
   }
 
   .mobile-nav-active {

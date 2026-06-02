@@ -67,8 +67,8 @@ export default function DepartmentDetailsPage() {
                       <a href="appointment.html" className="btn-primary">
                         Request a Consultation
                       </a>
-                      <a href="/services" className="btn-secondary">
-                        <span>View All Services</span>
+                      <a href="/products" className="btn-secondary">
+                        <span>View All Products</span>
                         <i className="bi bi-arrow-right" />
                       </a>
                     </div>
@@ -82,7 +82,7 @@ export default function DepartmentDetailsPage() {
                   >
                     <div className="image-container">
                       <img
-                        src="assets/img/health/neurology-2.webp"
+                        src="/assets/img/health/neurology-2.webp"
                         alt="Medicare guidance"
                         className="img-fluid primary-image"
                       />
@@ -232,7 +232,7 @@ export default function DepartmentDetailsPage() {
                   >
                     <div className="expert-image">
                       <img
-                        src="assets/img/health/neurology-4.webp"
+                        src="/assets/img/health/neurology-4.webp"
                         alt="Insurance advisor"
                         className="img-fluid"
                       />

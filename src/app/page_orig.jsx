@@ -120,7 +120,7 @@ export default function HomePage() {
                 >
                 <div className="main-image">
                     <img
-                    src="assets/img/health/staff-10.webp"
+                    src="/assets/img/health/staff-10.webp"
                     alt="Modern Healthcare Facility"
                     className="img-fluid"
                     />
@@ -224,7 +224,7 @@ export default function HomePage() {
                 <div className="about-visual">
                 <div className="main-image">
                     <img
-                    src="assets/img/health/facilities-9.webp"
+                    src="/assets/img/health/facilities-9.webp"
                     alt="Modern medical facility"
                     className="img-fluid"
                     />
@@ -293,7 +293,7 @@ export default function HomePage() {
                 </div>
                 <div className="specialty-visual">
                     <img
-                    src="assets/img/health/cardiology-1.webp"
+                    src="/assets/img/health/cardiology-1.webp"
                     alt="Cardiovascular Medicine"
                     className="img-fluid"
                     />
@@ -332,7 +332,7 @@ export default function HomePage() {
                 </div>
                 <div className="specialty-visual">
                     <img
-                    src="assets/img/health/neurology-4.webp"
+                    src="/assets/img/health/neurology-4.webp"
                     alt="Neurological Sciences"
                     className="img-fluid"
                     />
@@ -431,11 +431,11 @@ export default function HomePage() {
         </div>
         </section>
         {/* /Featured Departments Section */}
-        {/* Featured Services Section */}
+        {/* Featured Products Section */}
         <section id="featured-services" className="featured-services section">
         {/* Section Title */}
         <div className="container section-title" data-aos="fade-up">
-            <h2>Featured Services</h2>
+            <h2>Featured Products</h2>
             <p>
             Key Features of Our Insurance Solutions
             </p>
@@ -447,8 +447,8 @@ export default function HomePage() {
                 <div className="featured-service-main">
                 <div className="service-image-wrapper">
                     <img
-                    src="assets/img/health/consultation-4.webp"
-                    alt="Premier Healthcare Services"
+                    src="/assets/img/health/consultation-4.webp"
+                    alt="Premier Healthcare Products"
                     className="img-fluid"
                     loading="lazy"
                     />
@@ -466,8 +466,8 @@ export default function HomePage() {
                     Vestibulum ante ipsum primis in faucibus orci luctus et
                     ultrices posuere cubilia curae donec velit neque.
                     </p>
-                    <a href="/services" className="main-cta">
-                    Explore Our Services
+                    <a href="/products" className="main-cta">
+                    Explore Our Products
                     </a>
                 </div>
                 </div>
@@ -541,7 +541,7 @@ export default function HomePage() {
                 <div className="specialty-card">
                     <div className="specialty-image">
                     <img
-                        src="assets/img/health/maternal-2.webp"
+                        src="/assets/img/health/maternal-2.webp"
                         alt="Maternal Care"
                         className="img-fluid"
                         loading="lazy"
@@ -557,7 +557,7 @@ export default function HomePage() {
                 <div className="specialty-card">
                     <div className="specialty-image">
                     <img
-                        src="assets/img/health/vaccination-3.webp"
+                        src="/assets/img/health/vaccination-3.webp"
                         alt="Vaccination"
                         className="img-fluid"
                         loading="lazy"
@@ -573,7 +573,7 @@ export default function HomePage() {
                 <div className="specialty-card">
                     <div className="specialty-image">
                     <img
-                        src="assets/img/health/emergency-1.webp"
+                        src="/assets/img/health/emergency-1.webp"
                         alt="Emergency Care"
                         className="img-fluid"
                         loading="lazy"
@@ -589,7 +589,7 @@ export default function HomePage() {
                 <div className="specialty-card">
                     <div className="specialty-image">
                     <img
-                        src="assets/img/health/facilities-6.webp"
+                        src="/assets/img/health/facilities-6.webp"
                         alt="Advanced Tech"
                         className="img-fluid"
                         loading="lazy"
@@ -605,7 +605,7 @@ export default function HomePage() {
             </div>
         </div>
         </section>
-        {/* /Featured Services Section */}
+        {/* /Featured Products Section */}
         {/* Find A Doctor Section */}
         <section id="find-a-doctor" className="find-a-doctor section">
         {/* Section Title */}
@@ -673,7 +673,7 @@ export default function HomePage() {
                 <div className="profile-header">
                 <div className="doctor-avatar">
                     <img
-                    src="assets/img/health/staff-2.webp"
+                    src="/assets/img/health/staff-2.webp"
                     alt="Dr. Amanda Foster"
                     className="img-fluid"
                     />
@@ -717,7 +717,7 @@ export default function HomePage() {
                 <div className="profile-header">
                 <div className="doctor-avatar">
                     <img
-                    src="assets/img/health/staff-6.webp"
+                    src="/assets/img/health/staff-6.webp"
                     alt="Dr. Marcus Johnson"
                     className="img-fluid"
                     />
@@ -761,7 +761,7 @@ export default function HomePage() {
                 <div className="profile-header">
                 <div className="doctor-avatar">
                     <img
-                    src="assets/img/health/staff-4.webp"
+                    src="/assets/img/health/staff-4.webp"
                     alt="Dr. Rachel Williams"
                     className="img-fluid"
                     />
@@ -805,7 +805,7 @@ export default function HomePage() {
                 <div className="profile-header">
                 <div className="doctor-avatar">
                     <img
-                    src="assets/img/health/staff-8.webp"
+                    src="/assets/img/health/staff-8.webp"
                     alt="Dr. David Chen"
                     className="img-fluid"
                     />
@@ -849,7 +849,7 @@ export default function HomePage() {
                 <div className="profile-header">
                 <div className="doctor-avatar">
                     <img
-                    src="assets/img/health/staff-11.webp"
+                    src="/assets/img/health/staff-11.webp"
                     alt="Dr. Victoria Torres"
                     className="img-fluid"
                     />
@@ -893,7 +893,7 @@ export default function HomePage() {
                 <div className="profile-header">
                 <div className="doctor-avatar">
                     <img
-                    src="assets/img/health/staff-14.webp"
+                    src="/assets/img/health/staff-14.webp"
                     alt="Dr. Benjamin Lee"
                     className="img-fluid"
                     />
@@ -966,8 +966,8 @@ export default function HomePage() {
                         <span>Schedule Consultation</span>
                         <i className="bi bi-arrow-right" />
                     </a>
-                    <a href="services.html" className="secondary-cta">
-                        <span>Explore Services</span>
+                    <a href="/products" className="secondary-cta">
+                        <span>Explore Products</span>
                         <i className="bi bi-arrow-right" />
                     </a>
                     </div>
@@ -980,7 +980,7 @@ export default function HomePage() {
                     data-aos-delay={300}
                 >
                     <img
-                    src="assets/img/health/facilities-9.webp"
+                    src="/assets/img/health/facilities-9.webp"
                     alt="Medical Excellence"
                     className="img-fluid"
                     />

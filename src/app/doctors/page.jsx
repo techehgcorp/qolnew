@@ -42,7 +42,7 @@ export default function DoctorsPage() {
                   <div className="doctor-card">
                     <div className="doctor-image">
                       <img
-                        src="assets/img/health/staff-1.webp"
+                        src="/assets/img/health/staff-1.webp"
                         alt="Marcus Johnson"
                         className="img-fluid"
                       />
@@ -92,7 +92,7 @@ export default function DoctorsPage() {
                   <div className="doctor-card">
                     <div className="doctor-image">
                       <img
-                        src="assets/img/health/staff-2.webp"
+                        src="/assets/img/health/staff-2.webp"
                         alt="Sarah Williams"
                         className="img-fluid"
                       />
@@ -142,7 +142,7 @@ export default function DoctorsPage() {
                   <div className="doctor-card">
                     <div className="doctor-image">
                       <img
-                        src="assets/img/health/staff-3.webp"
+                        src="/assets/img/health/staff-3.webp"
                         alt="Michael Chen"
                         className="img-fluid"
                       />
@@ -192,7 +192,7 @@ export default function DoctorsPage() {
                   <div className="doctor-card">
                     <div className="doctor-image">
                       <img
-                        src="assets/img/health/staff-4.webp"
+                        src="/assets/img/health/staff-4.webp"
                         alt="Emily Rodriguez"
                         className="img-fluid"
                       />
@@ -242,7 +242,7 @@ export default function DoctorsPage() {
                   <div className="doctor-card">
                     <div className="doctor-image">
                       <img
-                        src="assets/img/health/staff-5.webp"
+                        src="/assets/img/health/staff-5.webp"
                         alt="David Thompson"
                         className="img-fluid"
                       />
@@ -292,7 +292,7 @@ export default function DoctorsPage() {
                   <div className="doctor-card">
                     <div className="doctor-image">
                       <img
-                        src="assets/img/health/staff-6.webp"
+                        src="/assets/img/health/staff-6.webp"
                         alt="Lisa Anderson"
                         className="img-fluid"
                       />
@@ -342,7 +342,7 @@ export default function DoctorsPage() {
                   <div className="doctor-card">
                     <div className="doctor-image">
                       <img
-                        src="assets/img/health/staff-7.webp"
+                        src="/assets/img/health/staff-7.webp"
                         alt="Robert Martinez"
                         className="img-fluid"
                       />
@@ -392,7 +392,7 @@ export default function DoctorsPage() {
                   <div className="doctor-card">
                     <div className="doctor-image">
                       <img
-                        src="assets/img/health/staff-8.webp"
+                        src="/assets/img/health/staff-8.webp"
                         alt="Jennifer Lee"
                         className="img-fluid"
                       />

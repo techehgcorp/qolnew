@@ -55,7 +55,7 @@ export default function TestimonialsPage() {
                       </p>
                       <div className="profile">
                         {/* <img
-                          src="assets/img/person/person-m-9.webp"
+                          src="/assets/img/person/person-m-9.webp"
                           className="testimonial-img"
                           alt=""
                           loading="lazy"
@@ -87,7 +87,7 @@ export default function TestimonialsPage() {
                       </p>
                       <div className="profile">
                         {/* <img
-                          src="assets/img/person/person-f-5.webp"
+                          src="/assets/img/person/person-f-5.webp"
                           className="testimonial-img"
                           alt=""
                           loading="lazy"
@@ -119,7 +119,7 @@ export default function TestimonialsPage() {
                       </p>
                       <div className="profile">
                         {/* <img
-                          src="assets/img/person/person-f-12.webp"
+                          src="/assets/img/person/person-f-12.webp"
                           className="testimonial-img"
                           alt=""
                           loading="lazy"
@@ -151,7 +151,7 @@ export default function TestimonialsPage() {
                       </p>
                       <div className="profile">
                         {/* <img
-                          src="assets/img/person/person-m-12.webp"
+                          src="/assets/img/person/person-m-12.webp"
                           className="testimonial-img"
                           alt=""
                           loading="lazy"
@@ -183,7 +183,7 @@ export default function TestimonialsPage() {
                       </p>
                       <div className="profile">
                         {/* <img
-                          src="assets/img/person/person-m-13.webp"
+                          src="/assets/img/person/person-m-13.webp"
                           className="testimonial-img"
                           alt=""
                           loading="lazy"
@@ -215,7 +215,7 @@ export default function TestimonialsPage() {
                       </p>
                       <div className="profile">
                         {/* <img
-                          src="assets/img/person/person-f-13.webp"
+                          src="/assets/img/person/person-f-13.webp"
                           className="testimonial-img"
                           alt=""
                           loading="lazy"
@@ -256,7 +256,7 @@ export default function TestimonialsPage() {
                     <div className="testimonial-footer">
                       <div className="testimonial-author">
                         {/* <img
-                          src="assets/img/person/person-m-3.webp"
+                          src="/assets/img/person/person-m-3.webp"
                           alt="Author"
                           className="img-fluid rounded-circle"
                           loading="lazy"
@@ -290,7 +290,7 @@ export default function TestimonialsPage() {
                     <div className="testimonial-footer">
                       <div className="testimonial-author">
                         {/* <img
-                          src="assets/img/person/person-f-5.webp"
+                          src="/assets/img/person/person-f-5.webp"
                           alt="Author"
                           className="img-fluid rounded-circle"
                           loading="lazy"
@@ -324,7 +324,7 @@ export default function TestimonialsPage() {
                     <div className="testimonial-footer">
                       <div className="testimonial-author">
                         {/* <img
-                          src="assets/img/person/person-m-7.webp"
+                          src="/assets/img/person/person-m-7.webp"
                           alt="Author"
                           className="img-fluid rounded-circle"
                           loading="lazy"
@@ -358,7 +358,7 @@ export default function TestimonialsPage() {
                     <div className="testimonial-footer">
                       <div className="testimonial-author">
                         {/* <img
-                          src="assets/img/person/person-f-9.webp"
+                          src="/assets/img/person/person-f-9.webp"
                           alt="Author"
                           className="img-fluid rounded-circle"
                           loading="lazy"
@@ -392,7 +392,7 @@ export default function TestimonialsPage() {
                     <div className="testimonial-footer">
                       <div className="testimonial-author">
                         {/* <img
-                          src="assets/img/person/person-f-11.webp"
+                          src="/assets/img/person/person-f-11.webp"
                           alt="Author"
                           className="img-fluid rounded-circle"
                           loading="lazy"
@@ -426,7 +426,7 @@ export default function TestimonialsPage() {
                     <div className="testimonial-footer">
                       <div className="testimonial-author">
                         {/* <img
-                          src="assets/img/person/person-m-12.webp"
+                          src="/assets/img/person/person-m-12.webp"
                           alt="Author"
                           className="img-fluid rounded-circle"
                           loading="lazy"

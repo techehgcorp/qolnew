@@ -4,12 +4,13 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const servicePages = [
-  { href: "/services", label: "Services" },
-  { href: "/service-details", label: "Service Details" },
+const productPages = [
+  { href: "/products", label: "Products" },
+  { href: "/product-details", label: "Product Details" },
 ];
 
-const morePages = [
+const resourcePages = [
+  { href: "/resources/indexed-universal-life", label: "Indexed Universal Life (IUL)" },
   // { href: "/department-details", label: "Department Details" },
   { href: "/testimonials", label: "Testimonials" },
   { href: "/faq", label: "Frequently Asked Questions" },
@@ -38,8 +39,8 @@ export default function NavBar() {
   const [showQuoteButton, setShowQuoteButton] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [openDropdowns, setOpenDropdowns] = useState({});
-  const servicePagesActive = servicePages.some((item) => isActive(pathname, item.href));
-  const morePagesActive = morePages.some((item) => isActive(pathname, item.href));
+  const productPagesActive = productPages.some((item) => isActive(pathname, item.href));
+  const resourcePagesActive = resourcePages.some((item) => isActive(pathname, item.href));
   const selfEnrollmentPagesActive = selfEnrollmentPages.some((item) => isActive(pathname, item.href));
 
   const closeMobileNav = () => {
@@ -151,13 +152,13 @@ export default function NavBar() {
             <li className="dropdown">
               <a
                 href="#"
-                className={servicePagesActive || openDropdowns.services ? "active" : undefined}
-                onClick={(event) => toggleDropdown(event, "services")}
+                className={productPagesActive || openDropdowns.products ? "active" : undefined}
+                onClick={(event) => toggleDropdown(event, "products")}
               >
-                <span>Services</span> <i className="bi bi-chevron-down toggle-dropdown" />
+                <span>Products</span> <i className="bi bi-chevron-down toggle-dropdown" />
               </a>
-              <ul className={openDropdowns.services ? "dropdown-active" : undefined}>
-                {servicePages.map((item) => (
+              <ul className={openDropdowns.products ? "dropdown-active" : undefined}>
+                {productPages.map((item) => (
                   <li key={item.href}>
                     <Link
                       href={item.href}
@@ -213,13 +214,13 @@ export default function NavBar() {
             <li className="dropdown more-dropdown">
               <a
                 href="#"
-                className={morePagesActive || openDropdowns.more ? "active" : undefined}
-                onClick={(event) => toggleDropdown(event, "more")}
+                className={resourcePagesActive || openDropdowns.resources ? "active" : undefined}
+                onClick={(event) => toggleDropdown(event, "resources")}
               >
-                <span>&bull;&bull;&bull;</span> <i className="bi bi-chevron-down toggle-dropdown" />
+                <span>Resources</span> <i className="bi bi-chevron-down toggle-dropdown" />
               </a>
-              <ul className={openDropdowns.more ? "dropdown-active" : undefined}>
-                {morePages.map((item) => (
+              <ul className={openDropdowns.resources ? "dropdown-active" : undefined}>
+                {resourcePages.map((item) => (
                   <li key={item.href}>
                     <Link
                       href={item.href}
@@ -232,7 +233,17 @@ export default function NavBar() {
                 ))}
               </ul>
             </li>
-            
+
+            <li className="appointment-nav-item">
+              <Link
+                href="/appointment"
+                className={`appointment-nav-button${isActive(pathname, "/appointment") ? " active" : ""}`}
+                onClick={closeMobileNav}
+              >
+                Appointment
+              </Link>
+            </li>
+
             <li className={`quote-nav-item${showQuoteButton ? " is-visible" : ""}`}>
               <a href="#quote" className="quote-nav-button" data-quote-modal-trigger onClick={closeMobileNav}>
                 Get a Quote

@@ -1,91 +1,125 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 const initialFormData = {
-  zipCode: "",
-  coverage: "",
-  insurance: "",
-  income: "",
-  name: "",
+  appointmentDate: "",
+  appointmentTime: "",
+  firstName: "",
   lastName: "",
-  dob: "",
-  address: "",
-  state: "",
   email: "",
   phone: "",
+  contactMethod: "phone",
+  comments: "",
 };
 
-const states = [
-  "Alabama",
-  "Alaska",
-  "Arizona",
-  "Arkansas",
-  "California",
-  "Colorado",
-  "Connecticut",
-  "Delaware",
-  "Florida",
-  "Georgia",
-  "Hawaii",
-  "Idaho",
-  "Illinois",
-  "Indiana",
-  "Iowa",
-  "Kansas",
-  "Kentucky",
-  "Louisiana",
-  "Maine",
-  "Maryland",
-  "Massachusetts",
-  "Michigan",
-  "Minnesota",
-  "Mississippi",
-  "Missouri",
-  "Montana",
-  "Nebraska",
-  "Nevada",
-  "New Hampshire",
-  "New Jersey",
-  "New Mexico",
-  "New York",
-  "North Carolina",
-  "North Dakota",
-  "Ohio",
-  "Oklahoma",
-  "Oregon",
-  "Pennsylvania",
-  "Rhode Island",
-  "South Carolina",
-  "South Dakota",
-  "Tennessee",
-  "Texas",
-  "Utah",
-  "Vermont",
-  "Virginia",
-  "Washington",
-  "West Virginia",
-  "Wisconsin",
-  "Wyoming",
+const timeOptions = [
+  "9:00 AM",
+  "9:30 AM",
+  "10:00 AM",
+  "10:30 AM",
+  "11:00 AM",
+  "11:30 AM",
+  "12:00 PM",
+  "12:30 PM",
+  "1:00 PM",
+  "1:30 PM",
+  "2:00 PM",
+  "2:30 PM",
+  "3:00 PM",
+  "3:30 PM",
+  "4:00 PM",
 ];
 
+const contactMethods = [
+  { value: "office", label: "Face-to-Face Office Meeting" },
+  { value: "phone", label: "Appointment by Phone" },
+  { value: "virtual", label: "Virtual Meeting via Google Meet" },
+];
+
+function getTodayValue() {
+  return new Date().toISOString().split("T")[0];
+}
+
+function formatDate(dateValue) {
+  if (!dateValue) {
+    return "";
+  }
+
+  const date = new Date(`${dateValue}T00:00:00`);
+  return date.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
 export default function AppointmentForm() {
+  const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState(initialFormData);
   const [status, setStatus] = useState("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const today = useMemo(() => getTodayValue(), []);
+  const progress = currentStep === 0 ? 50 : 100;
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((current) => ({ ...current, [name]: value }));
+    setStatus("idle");
+    setErrorMessage("");
+  };
+
+  const validateStep = () => {
+    if (currentStep === 0 && (!formData.appointmentDate || !formData.appointmentTime)) {
+      setErrorMessage("Please select a date and time before continuing.");
+      return false;
+    }
+
+    if (currentStep === 1) {
+      const requiredFields = ["firstName", "lastName", "email", "phone", "contactMethod"];
+      const missingField = requiredFields.find((field) => !formData[field].trim());
+
+      if (missingField) {
+        setErrorMessage("Please complete the required fields before scheduling.");
+        return false;
+      }
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+        setErrorMessage("Please enter a valid email address.");
+        return false;
+      }
+    }
+
+    return true;
+  };
+
+  const goNext = () => {
+    if (!validateStep()) {
+      return;
+    }
+
+    setErrorMessage("");
+    setCurrentStep(1);
+  };
+
+  const goBack = () => {
+    setErrorMessage("");
+    setStatus("idle");
+    setCurrentStep(0);
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (!validateStep()) {
+      return;
+    }
+
     setStatus("loading");
     setErrorMessage("");
 
     try {
-      const response = await fetch("/api/saveToGoogleSheet", {
+      const response = await fetch("/api/saveToAppointmentSheet", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -96,225 +130,210 @@ export default function AppointmentForm() {
       const data = await response.json().catch(() => ({}));
 
       if (!response.ok) {
-        throw new Error(data?.error || "Unable to send your consultation request.");
+        throw new Error(data?.error || "Unable to send your appointment request.");
       }
 
       setFormData(initialFormData);
+      setCurrentStep(0);
       setStatus("success");
     } catch (error) {
       setStatus("error");
-      setErrorMessage(error.message || "Unable to send your consultation request.");
+      setErrorMessage(error.message || "Unable to send your appointment request.");
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="google-sheet-form">
-      <div className="row gy-4">
-        <div className="col-12">
-          <input
-            type="text"
-            name="zipCode"
-            className="form-control"
-            placeholder="ZIP Code"
-            value={formData.zipCode}
-            onChange={handleChange}
-            required
-          />
+    <div className="appointment-scheduler">
+      {status === "success" && (
+        <div className="appointment-scheduler__success">
+          Your appointment request has been sent successfully. Our team will contact you shortly.
         </div>
-        <div className="col-md-6">
-          <label className="form-label" htmlFor="coverage">
-            Are you looking for individual or family coverage?
-          </label>
-          <select
-            id="coverage"
-            name="coverage"
-            className="form-select"
-            value={formData.coverage}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Individual or Family Coverage?</option>
-            <option value="individual">Individual</option>
-            <option value="family">Family</option>
-          </select>
-        </div>
-        <div className="col-md-6">
-          <label className="form-label" htmlFor="insurance">
-            What type of coverage are you looking for?
-          </label>
-          <select
-            id="insurance"
-            name="insurance"
-            className="form-select"
-            value={formData.insurance}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select any insurance</option>
-            <option value="life">Life</option>
-            <option value="health">Health</option>
-            <option value="medicare">Medicare</option>
-            <option value="accident">Accident</option>
-            <option value="dental">Dental</option>
-            <option value="vision">Vision</option>
-            <option value="affordable-care-act">Affordable Care Act</option>
-          </select>
-        </div>
-        <div className="col-12">
-          <label className="form-label" htmlFor="income">
-            What's your household income?
-          </label>
-          <select
-            id="income"
-            name="income"
-            className="form-select"
-            value={formData.income}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select Income Range</option>
-            <option value="$0-$15,000">$0-$15,000</option>
-            <option value="$15,001-$30,000">$15,001-$30,000</option>
-            <option value="$30,001-$50,000">$30,001-$50,000</option>
-            <option value="$50,001-$75,000">$50,001-$75,000</option>
-            <option value="$75,000+">$75,000+</option>
-          </select>
-        </div>
-        <div className="col-md-6">
-          <label className="form-label" htmlFor="name">
-            What's your name?
-          </label>
-          <input
-            id="name"
-            type="text"
-            name="name"
-            className="form-control"
-            placeholder="Enter your first name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="col-md-6">
-          <label className="form-label" htmlFor="lastName">
-            What's your last name?
-          </label>
-          <input
-            id="lastName"
-            type="text"
-            name="lastName"
-            className="form-control"
-            placeholder="Enter your last name"
-            value={formData.lastName}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="col-12">
-          <label className="form-label" htmlFor="dob">
-            Date of Birth
-          </label>
-          <input
-            id="dob"
-            type="date"
-            name="dob"
-            className="form-control"
-            value={formData.dob}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="col-md-6">
-          <label className="form-label" htmlFor="address">
-            Home Address
-          </label>
-          <input
-            id="address"
-            type="text"
-            name="address"
-            className="form-control"
-            placeholder="Enter your address"
-            value={formData.address}
-            onChange={handleChange}
-          />
-          <small className="form-optional">*Optional</small>
-        </div>
-        <div className="col-md-6">
-          <label className="form-label" htmlFor="state">
-            State
-          </label>
-          <select
-            id="state"
-            name="state"
-            className="form-select"
-            value={formData.state}
-            onChange={handleChange}
-          >
-            <option value="">Select State</option>
-            {states.map((state) => (
-              <option key={state} value={state}>
-                {state}
-              </option>
-            ))}
-          </select>
-          <small className="form-optional">*Optional</small>
-        </div>
-        <div className="col-md-6">
-          <label className="form-label" htmlFor="email">
-            Email
-          </label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            className="form-control"
-            placeholder="Enter your email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="col-md-6">
-          <label className="form-label" htmlFor="phone">
-            Phone
-          </label>
-          <input
-            id="phone"
-            type="tel"
-            name="phone"
-            className="form-control"
-            placeholder="Enter your phone number"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-          <small className="form-optional">*Optional</small>
-        </div>
-        <div className="col-12">
-          <p className="form-disclaimer">
-            You agree to receive recurring automated promotional text and email
-            messages from QOL Insurance. Consent is not a condition of purchase.
-            Reply HELP for help or STOP to cancel. Message and data rates may
-            apply. View Privacy Policy and SMS Terms of Service. By submitting
-            this form, you are consenting to receive marketing emails from QOL
-            Insurance. You can revoke your consent to receive emails at any time
-            by unsubscribing to emails at info@qolinsurance.com
+      )}
+
+      <div className="quote-modal__visual appointment-scheduler__visual">
+        <img src="/assets/img/Logo.png" alt="" />
+        <div>
+          <span>Step {currentStep + 1}</span>
+          <h2>{currentStep === 0 ? "Select a Date & Time" : "Interview Details"}</h2>
+          <p>
+            {currentStep === 0
+              ? "Choose a consultation time with a licensed QoL Insurance advisor."
+              : "Share your details and preferred contact method for the appointment."}
           </p>
         </div>
-        <div className="col-12">
-          <div className={`loading${status === "loading" ? " d-block" : ""}`}>
-            Loading
-          </div>
-          <div className={`error-message${status === "error" ? " d-block" : ""}`}>
-            {errorMessage}
-          </div>
-          <div className={`sent-message${status === "success" ? " d-block" : ""}`}>
-            Your consultation request has been sent. Thank you!
-          </div>
-          <button type="submit" className="btn-book" disabled={status === "loading"}>
-            {status === "loading" ? "Sending..." : "Request Consultation"}
-          </button>
-        </div>
       </div>
-    </form>
+
+      <div className="quote-modal__progress" aria-label={`Step ${currentStep + 1} of 2`}>
+        <div style={{ width: `${progress}%` }} />
+      </div>
+
+      <form className="quote-modal__form appointment-scheduler__form" onSubmit={handleSubmit}>
+        {currentStep === 0 ? (
+          <>
+            <div className="appointment-scheduler__summary">
+              <img src="/assets/img/Logo.png" alt="" />
+              <h3>Interview Schedule</h3>
+              <p>
+                <i className="bi bi-telephone-fill" /> 30 min
+              </p>
+              <span>
+                Please select a time slot for your initial interview. This meeting can be conducted
+                by phone, video call, or in person, based on your preference.
+              </span>
+            </div>
+
+            <div className="quote-modal__grid">
+              <div className="quote-modal__field">
+                <label htmlFor="appointmentDate">Date</label>
+                <input
+                  id="appointmentDate"
+                  type="date"
+                  name="appointmentDate"
+                  min={today}
+                  value={formData.appointmentDate}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="quote-modal__field">
+                <label htmlFor="appointmentTime">Time</label>
+                <select
+                  id="appointmentTime"
+                  name="appointmentTime"
+                  value={formData.appointmentTime}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Select Time</option>
+                  {timeOptions.map((time) => (
+                    <option key={time} value={time}>
+                      {time}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="appointment-scheduler__summary">
+              <img src="/assets/img/Logo.png" alt="" />
+              <h3>Personal Detail</h3>
+              <p>
+                <i className="bi bi-telephone-fill" /> 30 min
+              </p>
+              <span>Date: {formatDate(formData.appointmentDate)}</span>
+              <span>Time: {formData.appointmentTime}</span>
+            </div>
+
+            <div className="quote-modal__grid">
+              <div className="quote-modal__field">
+                <label htmlFor="firstName">First name</label>
+                <input
+                  id="firstName"
+                  type="text"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  placeholder="Enter your first name"
+                  required
+                />
+              </div>
+              <div className="quote-modal__field">
+                <label htmlFor="lastName">Last name</label>
+                <input
+                  id="lastName"
+                  type="text"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  placeholder="Enter your last name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="quote-modal__grid">
+              <div className="quote-modal__field">
+                <label htmlFor="email">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div className="quote-modal__field">
+                <label htmlFor="phone">Phone</label>
+                <input
+                  id="phone"
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="Enter your phone number"
+                  required
+                />
+              </div>
+            </div>
+
+            <fieldset className="appointment-scheduler__radios">
+              <legend>Preferred Contact Method:</legend>
+              {contactMethods.map((method) => (
+                <label key={method.value}>
+                  <input
+                    type="radio"
+                    name="contactMethod"
+                    value={method.value}
+                    checked={formData.contactMethod === method.value}
+                    onChange={handleChange}
+                  />
+                  <span>{method.label}</span>
+                </label>
+              ))}
+            </fieldset>
+
+            <div className="quote-modal__field">
+              <label htmlFor="comments">Additional comments <span>Optional</span></label>
+              <textarea
+                id="comments"
+                name="comments"
+                value={formData.comments}
+                onChange={handleChange}
+                placeholder="Anything you want us to know before the appointment?"
+                rows={4}
+              />
+            </div>
+          </>
+        )}
+
+        <div className={`quote-modal__message ${errorMessage || status === "error" ? "is-visible" : ""}`}>
+          {errorMessage}
+        </div>
+
+        <div className="quote-modal__actions">
+          <button
+            type="button"
+            className="quote-modal__secondary"
+            onClick={goBack}
+            disabled={currentStep === 0 || status === "loading"}
+          >
+            Back
+          </button>
+          {currentStep === 0 ? (
+            <button type="button" className="quote-modal__primary" onClick={goNext}>
+              Continue
+            </button>
+          ) : (
+            <button type="submit" className="quote-modal__primary" disabled={status === "loading"}>
+              {status === "loading" ? "Submitting..." : "Schedule"}
+            </button>
+          )}
+        </div>
+      </form>
+    </div>
   );
 }

@@ -37,13 +37,13 @@ export default function GalleryPage() {
                 <div className="col-xl-3 col-lg-4 col-md-6">
                   <div className="gallery-item h-100">
                     <img
-                      src="assets/img/gallery/gallery-1.webp"
+                      src="/assets/img/gallery/gallery-1.webp"
                       className="img-fluid"
                       alt=""
                     />
                     <div className="gallery-links d-flex align-items-center justify-content-center">
                       <a
-                        href="assets/img/gallery/gallery-1.webp"
+                        href="/assets/img/gallery/gallery-1.webp"
                         title="Gallery 1"
                         className="glightbox preview-link"
                       >
@@ -59,13 +59,13 @@ export default function GalleryPage() {
                 <div className="col-xl-3 col-lg-4 col-md-6">
                   <div className="gallery-item h-100">
                     <img
-                      src="assets/img/gallery/gallery-2.webp"
+                      src="/assets/img/gallery/gallery-2.webp"
                       className="img-fluid"
                       alt=""
                     />
                     <div className="gallery-links d-flex align-items-center justify-content-center">
                       <a
-                        href="assets/img/gallery/gallery-2.webp"
+                        href="/assets/img/gallery/gallery-2.webp"
                         title="Gallery 2"
                         className="glightbox preview-link"
                       >
@@ -81,13 +81,13 @@ export default function GalleryPage() {
                 <div className="col-xl-3 col-lg-4 col-md-6">
                   <div className="gallery-item h-100">
                     <img
-                      src="assets/img/gallery/gallery-3.webp"
+                      src="/assets/img/gallery/gallery-3.webp"
                       className="img-fluid"
                       alt=""
                     />
                     <div className="gallery-links d-flex align-items-center justify-content-center">
                       <a
-                        href="assets/img/gallery/gallery-3.webp"
+                        href="/assets/img/gallery/gallery-3.webp"
                         title="Gallery 3"
                         className="glightbox preview-link"
                       >
@@ -103,13 +103,13 @@ export default function GalleryPage() {
                 <div className="col-xl-3 col-lg-4 col-md-6">
                   <div className="gallery-item h-100">
                     <img
-                      src="assets/img/gallery/gallery-4.webp"
+                      src="/assets/img/gallery/gallery-4.webp"
                       className="img-fluid"
                       alt=""
                     />
                     <div className="gallery-links d-flex align-items-center justify-content-center">
                       <a
-                        href="assets/img/gallery/gallery-4.webp"
+                        href="/assets/img/gallery/gallery-4.webp"
                         title="Gallery 4"
                         className="glightbox preview-link"
                       >
@@ -125,13 +125,13 @@ export default function GalleryPage() {
                 <div className="col-xl-3 col-lg-4 col-md-6">
                   <div className="gallery-item h-100">
                     <img
-                      src="assets/img/gallery/gallery-5.webp"
+                      src="/assets/img/gallery/gallery-5.webp"
                       className="img-fluid"
                       alt=""
                     />
                     <div className="gallery-links d-flex align-items-center justify-content-center">
                       <a
-                        href="assets/img/gallery/gallery-5.webp"
+                        href="/assets/img/gallery/gallery-5.webp"
                         title="Gallery 5"
                         className="glightbox preview-link"
                       >
@@ -147,13 +147,13 @@ export default function GalleryPage() {
                 <div className="col-xl-3 col-lg-4 col-md-6">
                   <div className="gallery-item h-100">
                     <img
-                      src="assets/img/gallery/gallery-6.webp"
+                      src="/assets/img/gallery/gallery-6.webp"
                       className="img-fluid"
                       alt=""
                     />
                     <div className="gallery-links d-flex align-items-center justify-content-center">
                       <a
-                        href="assets/img/gallery/gallery-6.webp"
+                        href="/assets/img/gallery/gallery-6.webp"
                         title="Gallery 6"
                         className="glightbox preview-link"
                       >
@@ -169,13 +169,13 @@ export default function GalleryPage() {
                 <div className="col-xl-3 col-lg-4 col-md-6">
                   <div className="gallery-item h-100">
                     <img
-                      src="assets/img/gallery/gallery-7.webp"
+                      src="/assets/img/gallery/gallery-7.webp"
                       className="img-fluid"
                       alt=""
                     />
                     <div className="gallery-links d-flex align-items-center justify-content-center">
                       <a
-                        href="assets/img/gallery/gallery-7.webp"
+                        href="/assets/img/gallery/gallery-7.webp"
                         title="Gallery 7"
                         className="glightbox preview-link"
                       >
@@ -191,13 +191,13 @@ export default function GalleryPage() {
                 <div className="col-xl-3 col-lg-4 col-md-6">
                   <div className="gallery-item h-100">
                     <img
-                      src="assets/img/gallery/gallery-8.webp"
+                      src="/assets/img/gallery/gallery-8.webp"
                       className="img-fluid"
                       alt=""
                     />
                     <div className="gallery-links d-flex align-items-center justify-content-center">
                       <a
-                        href="assets/img/gallery/gallery-8.webp"
+                        href="/assets/img/gallery/gallery-8.webp"
                         title="Gallery 8"
                         className="glightbox preview-link"
                       >

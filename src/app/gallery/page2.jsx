@@ -11,8 +11,8 @@ export default function GalleryPage() {
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   {/* Favicons */}
-  <link href="assets/img/favicon.png" rel="icon" />
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+  <link href="/assets/img/favicon.png" rel="icon" />
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
   {/* Fonts */}
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossOrigin="" />
@@ -21,20 +21,20 @@ export default function GalleryPage() {
     rel="stylesheet"
   />
   {/* Vendor CSS Files */}
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <link
-    href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+    href="/assets/vendor/bootstrap-icons/bootstrap-icons.css"
     rel="stylesheet"
   />
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
   <link
-    href="assets/vendor/fontawesome-free/css/all.min.css"
+    href="/assets/vendor/fontawesome-free/css/all.min.css"
     rel="stylesheet"
   />
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
   {/* Main CSS File */}
-  <link href="assets/css/main.css" rel="stylesheet" />
+  <link href="/assets/css/main.css" rel="stylesheet" />
   {/* =======================================================
   * Template Name: Clinic
   * Template URL: https://bootstrapmade.com/clinic-bootstrap-template/
@@ -80,7 +80,7 @@ export default function GalleryPage() {
       <div className="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" className="logo d-flex align-items-center">
           {/* Uncomment the line below if you also wish to use an image logo */}
-          {/* <img src="assets/img/logo.webp" alt=""> */}
+          {/* <img src="/assets/img/logo.webp" alt=""> */}
           <h1 className="sitename">Clinic</h1>
         </a>
         <nav id="navmenu" className="navmenu">
@@ -95,7 +95,7 @@ export default function GalleryPage() {
               <a href="departments.html">Departments</a>
             </li>
             <li>
-              <a href="services.html">Services</a>
+              <a href="/products">Products</a>
             </li>
             <li>
               <a href="doctors.html">Doctors</a>
@@ -110,7 +110,7 @@ export default function GalleryPage() {
                   <a href="department-details.html">Department Details</a>
                 </li>
                 <li>
-                  <a href="service-details.html">Service Details</a>
+                  <a href="/product-details">Product Details</a>
                 </li>
                 <li>
                   <a href="appointment.html">Appointment</a>
@@ -454,7 +454,7 @@ export default function GalleryPage() {
                 </div>
                 <div className="col-6 col-lg-3">
                   <div className="nav-column">
-                    <h6>Services</h6>
+                    <h6>Products</h6>
                     <nav className="footer-nav">
                       <a href="#!">Brand Identity</a>
                       <a href="#!">Web Design</a>

@@ -42,7 +42,7 @@ export default function Footer() {
                         <a href="#!">Home</a>
                         <a href="#!">About</a>
                         <a href="#!">Departments</a>
-                        <a href="#!">Services</a>
+                        <a href="/products">Products</a>
                         <a href="#!">Appointments</a>
                         <a href="#!">Team</a>
                         <a href="#!">Terms</a>
@@ -54,7 +54,7 @@ export default function Footer() {
 
                   <div className="col-6 col-lg-3">
                     <div className="nav-column">
-                      <h6>Services</h6>
+                      <h6>Products</h6>
                       <nav className="footer-nav">
                         <a href="#!">Health Insurance</a>
                         <a href="#!">Life Insurance</a>
