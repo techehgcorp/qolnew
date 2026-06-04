@@ -84,11 +84,11 @@ export default function IndexedUniversalLifePage() {
                 a death benefit while also offering the potential to build cash value that can
                 be used later, depending on policy performance and how the policy is funded.
               </p>
-              <p>
+              {/* <p>
                 The PDFs you shared focused on four practical conversations: protecting loved
                 ones, using living benefits during qualifying health events, creating potential
                 tax-advantaged retirement income, and leaving a charitable legacy.
-              </p>
+              </p> */}
               <div className="iul-actions">
                 <Link href="/appointment" className="iul-primary-btn">
                   Schedule an Appointment

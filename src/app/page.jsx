@@ -19,7 +19,7 @@ export default function HomePage() {
                     data-aos="fade-right"
                     data-aos-delay={400}
                 >
-                    QOL Insurance helps individuals, families, and seniors compare life, health, Medicare, dental, vision, final-expense, and accident plans with licensed support.                </p>
+                    QOL Insurance helps individuals, families, and seniors compare life, health, medicare, dental, vision, final-expense, and accident plans with licensed support.                </p>
                 {/* <div
                     className="hero-stats mb-4"
                     data-aos="fade-right"
@@ -131,7 +131,7 @@ export default function HomePage() {
                     Trusted Insurance Coverage for Every Stage of Life
                 </h2>
                 <p className="lead-text">
-                    At QOL Insurance, we help individuals, families, and seniors compare coverage for life, health, Medicare, dental, vision, final-expense and accident insurance. Based in South Florida, our licensed agents work with multiple carriers to help you understand your options and choose protection that fits your needs, budget, and future.
+                    At QOL Insurance, we help individuals, families, and seniors compare coverage for life, health, medicare, dental, vision, final-expense and accident insurance. Based in South Florida, our licensed agents work with multiple carriers to help you understand your options and choose protection that fits your needs, budget, and future.
                 </p>
                 {/* <p>
                     Our licensed advisors walk you through health, life, dental,
@@ -273,7 +273,7 @@ export default function HomePage() {
         <div className="container" data-aos="fade-up" data-aos-delay={100}>
             <div className="row g-5">
             <div className="col-lg-6" data-aos="zoom-in" data-aos-delay={100}>
-                <div className="specialty-card">
+                <Link href="/products" className="specialty-card">
                 <div className="specialty-content">
                     <div className="specialty-meta">
                     <span className="specialty-label">MediCare</span>
@@ -308,11 +308,11 @@ export default function HomePage() {
                     <i className="bi bi-heart-pulse" />
                     </div>
                 </div>
-                </div>
+                </Link>
             </div>
             {/* End Specialty Card */}
             <div className="col-lg-6" data-aos="zoom-in" data-aos-delay={200}>
-                <div className="specialty-card">
+                <Link href="/products" className="specialty-card">
                 <div className="specialty-content">
                     <div className="specialty-meta">
                     <span className="specialty-label">Health Insurance</span>
@@ -347,10 +347,10 @@ export default function HomePage() {
                     <i className="bi bi-cpu" />
                     </div>
                 </div>
-                </div>
+                </Link>
             </div>
             <div className="col-lg-6" data-aos="zoom-in" data-aos-delay={200}>
-                <div className="specialty-card">
+                <Link href="/products" className="specialty-card">
                 <div className="specialty-content">
                     <div className="specialty-meta">
                     <span className="specialty-label">Life Insurance</span>
@@ -385,10 +385,10 @@ export default function HomePage() {
                     <i className="bi bi-cpu" />
                     </div>
                 </div>
-                </div>
+                </Link>
             </div>
             <div className="col-lg-6" data-aos="zoom-in" data-aos-delay={200}>
-                <div className="specialty-card">
+                <Link href="/products" className="specialty-card">
                 <div className="specialty-content">
                     <div className="specialty-meta">
                     <span className="specialty-label">Dental & Vision</span>
@@ -423,7 +423,7 @@ export default function HomePage() {
                     <i className="bi bi-cpu" />
                     </div>
                 </div>
-                </div>
+                </Link>
             </div>
             {/* End Specialty Card */}
             <div className="col-lg-4" data-aos="fade-up" data-aos-delay={100}>
@@ -498,7 +498,7 @@ export default function HomePage() {
                     <h3>Coverage Guidance When You Need It Most</h3>
                     <p>
                     Speak with a licensed agent for help reviewing urgent
-                    enrollment deadlines, plan changes, Medicare questions, and
+                    enrollment deadlines, plan changes, medicare questions, and
                     coverage concerns.
                     </p>
                 </div>
@@ -530,7 +530,7 @@ export default function HomePage() {
                 <div className="featured-service-main">
                 <div className="service-image-wrapper">
                     <img
-                    src="/assets/img/health/consultation-4.webp"
+                    src="/assets/img/health/consultation-4.png"
                     alt="Insurance consultation"
                     className="img-fluid"
                     loading="lazy"
@@ -572,7 +572,7 @@ export default function HomePage() {
                         Protect your family's future with coverage tailored to
                         income replacement, debt protection, and final expenses.
                     </p>
-                    <a href="/appointment" className="service-link">
+                    <a href="/products" className="service-link">
                         Learn More
                     </a>
                     </div>
@@ -591,7 +591,7 @@ export default function HomePage() {
                         Get help understanding Parts A, B, C, and D so you can
                         choose coverage that matches your doctors and medications.
                     </p>
-                    <a href="#!" className="service-link">
+                    <a href="/products" className="service-link">
                         Learn More
                     </a>
                     </div>
@@ -610,7 +610,27 @@ export default function HomePage() {
                         Add everyday protection for exams, glasses, cleanings,
                         and dental procedures with accessible plan options.
                     </p>
-                    <a href="#!" className="service-link">
+                    <a href="/products" className="service-link">
+                        Learn More
+                    </a>
+                    </div>
+                </div>
+                                <div
+                    className="service-item"
+                    data-aos="fade-up"
+                    data-aos-delay={600}
+                >
+                    <div className="service-icon-wrapper">
+                    <i className="bi bi-activity" />
+                    </div>
+                    <div className="service-info">
+                    <h4>Final Expense</h4>
+                    <p>
+                        Plan ahead for funeral costs, burial expenses, and other
+                        end-of-life needs with coverage designed to ease the
+                        financial burden on loved ones.
+                    </p>
+                    <a href="/products" className="service-link">
                         Learn More
                     </a>
                     </div>
@@ -637,6 +657,9 @@ export default function HomePage() {
                     <div className="specialty-content">
                     <h5>Health Insurance</h5>
                     <span>Build a stronger benefits strategy with plans for individuals, families, and self-employed members.</span>
+                    <a href="/products" className="service-link"><br />
+                        Learn More
+                    </a>
                     </div>
                 </div>
                 </div>
@@ -653,6 +676,9 @@ export default function HomePage() {
                     <div className="specialty-content">
                     <h5>Accident</h5>
                     <span>Supplement core coverage with accident protection that helps reduce surprise out-of-pocket costs.</span>
+                    <a href="/products" className="service-link">
+                        Learn More
+                    </a>
                     </div>
                 </div>
                 </div>
@@ -669,6 +695,9 @@ export default function HomePage() {
                     <div className="specialty-content">
                     <h5>ACA</h5>
                     <span>Explore ACA marketplace options with support for subsidies, enrollment timing, and essential benefits.</span>
+                    <a href="/products" className="service-link">
+                        Learn More
+                    </a>
                     </div>
                 </div>
                 </div>
@@ -676,15 +705,18 @@ export default function HomePage() {
                 <div className="specialty-card">
                     <div className="specialty-image">
                     <img
-                        src="/assets/img/health/facilities-6.webp"
+                        src="/assets/img/health/IUL.webp"
                         alt="Advanced Tech"
                         className="img-fluid"
                         loading="lazy"
                     />
                     </div>
                     <div className="specialty-content">
-                    <h5>Advanced Support</h5>
-                    <span>Get year-round help with claims questions, renewals, provider access, and benefit updates.</span>
+                    <h5>IUL (Indexed Universal Life Insurance)</h5>
+                    <span>Build flexible lifelong protection with cash value growth potential tied to a market index and options that can support future financial planning.</span>
+                    <a href="/products" className="service-link">
+                        Learn More
+                    </a>
                     </div>
                 </div>
                 </div>
@@ -733,7 +765,7 @@ export default function HomePage() {
                     data-aos-delay={300}
                 >
                     <img
-                    src="/assets/img/health/facilities-6.webp"
+                    src="/assets/img/health/facilities-62.png"
                     alt="Insurance support team"
                     className="img-fluid"
                     />
@@ -805,7 +837,7 @@ export default function HomePage() {
                     <h2>Need Help Choosing the Right Plan?</h2>
                     <p>
                     Our team is ready to answer questions about coverage,
-                    enrollment, Medicare eligibility, and benefit options so
+                    enrollment, medicare eligibility, and benefit options so
                     you can make your next decision with confidence.
                     </p>
                 </div>

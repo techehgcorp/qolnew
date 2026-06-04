@@ -39,14 +39,14 @@ export default function Footer() {
                     <div className="nav-column">
                       <h6>Pages</h6>
                       <nav className="footer-nav">
-                        <a href="#!">Home</a>
-                        <a href="#!">About</a>
-                        <a href="#!">Departments</a>
+                        <a href="/">Home</a>
+                        <a href="/about">About</a>
                         <a href="/products">Products</a>
-                        <a href="#!">Appointments</a>
-                        <a href="#!">Team</a>
-                        <a href="#!">Terms</a>
-                        <a href="#!">Privacy</a>
+                        <a href="/appointment">Appointments</a>
+                        <a href="/resources/indexed-universal-life">IUL</a>
+                        <a href="/team">Team</a>
+                        <a href="/terms">Terms</a>
+                        <a href="/privacy">Privacy</a>
                         
                       </nav>
                     </div>
@@ -56,10 +56,12 @@ export default function Footer() {
                     <div className="nav-column">
                       <h6>Products</h6>
                       <nav className="footer-nav">
-                        <a href="#!">Health Insurance</a>
-                        <a href="#!">Life Insurance</a>
-                        <a href="#!">Medicare</a>
-                        <a href="#!">Dental & Vision</a>
+                        <a href="/product-details">Health Insurance</a>
+                        <a href="/product-details">Life Insurance</a>
+                        <a href="/product-details">Medicare</a>
+                        <a href="/product-details">Dental & Vision</a>
+                        <a href="/product-details">Final Expense</a>
+
                       </nav>
                     </div>
                   </div>

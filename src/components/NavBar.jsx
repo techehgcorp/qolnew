@@ -7,10 +7,11 @@ import { usePathname } from "next/navigation";
 const productPages = [
   { href: "/products", label: "Products" },
   { href: "/product-details", label: "Product Details" },
+  { href: "/resources/indexed-universal-life", label: "Indexed Universal Life (IUL)" },
+
 ];
 
 const resourcePages = [
-  { href: "/resources/indexed-universal-life", label: "Indexed Universal Life (IUL)" },
   // { href: "/department-details", label: "Department Details" },
   { href: "/testimonials", label: "Testimonials" },
   { href: "/faq", label: "Frequently Asked Questions" },

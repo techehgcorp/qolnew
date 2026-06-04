@@ -212,17 +212,82 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              <div className="row justify-content-center">
+              <div className="row justify-content-center g-4">
                 <div
-                  className="col-lg-2 col-md-3 col-sm-5 col-7 mx-auto"
+                  className="col-lg-2 col-md-3 col-sm-4 col-6"
                   data-aos="zoom-in"
                   data-aos-delay={100}
+                >
+                  <div className="certification-item">
+                    <img
+                      src="/assets/img/clients/client-1.png"
+                      className="img-fluid"
+                      alt="Cigna Healthcare"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="col-lg-2 col-md-3 col-sm-4 col-6"
+                  data-aos="zoom-in"
+                  data-aos-delay={150}
+                >
+                  <div className="certification-item">
+                    <img
+                      src="/assets/img/clients/client-2.png"
+                      className="img-fluid"
+                      alt="Aetna"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="col-lg-2 col-md-3 col-sm-4 col-6"
+                  data-aos="zoom-in"
+                  data-aos-delay={200}
+                >
+                  <div className="certification-item">
+                    <img
+                      src="/assets/img/clients/client-3.png"
+                      className="img-fluid"
+                      alt="Anthem"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="col-lg-2 col-md-3 col-sm-4 col-6"
+                  data-aos="zoom-in"
+                  data-aos-delay={250}
+                >
+                  <div className="certification-item">
+                    <img
+                      src="/assets/img/clients/client-4.png"
+                      className="img-fluid"
+                      alt="Ambetter"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="col-lg-2 col-md-3 col-sm-4 col-6"
+                  data-aos="zoom-in"
+                  data-aos-delay={300}
                 >
                   <div className="certification-item florida-blue-certification">
                     <img
                       src="/assets/img/clients/client-5.png"
                       className="img-fluid"
                       alt="Florida Blue"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="col-lg-2 col-md-3 col-sm-4 col-6"
+                  data-aos="zoom-in"
+                  data-aos-delay={350}
+                >
+                  <div className="certification-item">
+                    <img
+                      src="/assets/img/clients/client-6.png"
+                      className="img-fluid"
+                      alt="Oscar"
                     />
                   </div>
                 </div>
