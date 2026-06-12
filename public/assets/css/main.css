@@ -160,14 +160,25 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(255, 255, 255, 0.78);
   color: var(--default-color);
   transition: all 0.5s;
   z-index: 997;
-  background-color: var(--background-color);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(500px);
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+}
+
+.header .branding {
+  margin: 10px 80px 0;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.12);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  padding: 0 8px;
 }
 
 .header .topbar {
@@ -219,8 +230,8 @@ h6 {
 }
 
 .header .branding {
-  min-height: 60px;
-  padding: 10px 0;
+  min-height: 0;
+  padding: 4px 0;
 }
 
 .header .logo {
@@ -228,15 +239,16 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-height: 40px;
   margin-right: 8px;
 }
 
 .header .logo h1 {
-  font-size: 30px;
+  font-size: 32px;
   margin: 0;
   font-weight: 600;
   color: var(--heading-color);
+  white-space: nowrap;
 }
 
 .scrolled .header .topbar {
@@ -248,7 +260,67 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgba(255, 255, 255, 0.88);
+  background-color: transparent;
+}
+
+.scrolled .header .branding {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
+}
+
+/* Nav text white on hero (home page, not scrolled) — top-level links only */
+.header .hero-page .navmenu > ul > li > a,
+.header .hero-page .navmenu > ul > li > a:focus,
+.header .hero-page .logo .sitename {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.header .hero-page .navmenu > ul > li > a:hover,
+.header .hero-page .navmenu > ul > li > .active,
+.header .hero-page .navmenu > ul > li > .active:focus {
+  color: #fff;
+}
+
+/* Dropdown links stay dark — they appear on white background */
+.header .hero-page .navmenu .dropdown ul a,
+.header .hero-page .navmenu .dropdown ul a:focus {
+  color: var(--nav-dropdown-color);
+}
+
+.header .hero-page .navmenu .dropdown ul a:hover,
+.header .hero-page .navmenu .dropdown ul .active,
+.header .hero-page .navmenu .dropdown ul li:hover > a {
+  color: var(--nav-dropdown-hover-color);
+}
+
+/* Keep Appointment & Quote buttons styled as-is on hero page */
+.header .hero-page .navmenu a.appointment-nav-button,
+.header .hero-page .navmenu a.appointment-nav-button:focus,
+.header .hero-page .navmenu a.quote-nav-button,
+.header .hero-page .navmenu a.quote-nav-button:focus {
+  color: var(--contrast-color);
+}
+
+/* Revert to dark text when scrolled */
+.scrolled .header .hero-page .navmenu > ul > li > a,
+.scrolled .header .hero-page .navmenu > ul > li > a:focus,
+.scrolled .header .hero-page .logo .sitename {
+  color: var(--nav-color);
+}
+
+.scrolled .header .hero-page .navmenu > ul > li > a:hover,
+.scrolled .header .hero-page .navmenu > ul > li > .active,
+.scrolled .header .hero-page .navmenu > ul > li > .active:focus {
+  color: var(--nav-hover-color);
+}
+
+/* Keep Appointment & Quote buttons white always */
+.scrolled .header .navmenu a.appointment-nav-button,
+.scrolled .header .navmenu a.appointment-nav-button:focus,
+.scrolled .header .navmenu a.quote-nav-button,
+.scrolled .header .navmenu a.quote-nav-button:focus {
+  color: var(--contrast-color) !important;
 }
 
 /*--------------------------------------------------------------
@@ -319,7 +391,7 @@ h6 {
   .navmenu a.appointment-nav-button,
   .navmenu a.appointment-nav-button:focus {
     min-width: 128px;
-    min-height: 42px;
+    min-height: 40px;
     justify-content: center;
     padding: 0 18px;
     border-radius: 8px;
@@ -1134,6 +1206,18 @@ section,
     linear-gradient(180deg, rgba(255, 248, 241, 0.02) 0%, rgba(255, 248, 241, 0.16) 100%),
     url("../img/health/staff6bg.png") center top / cover no-repeat;
   overflow: hidden;
+}
+
+.hero.hero-video-bg {
+  background: #020c1e;
+}
+
+.hero.hero-video-bg::before {
+  display: none;
+}
+
+.hero.hero-video-bg .hero-content h1 .highlight::after {
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .hero::before {
@@ -5613,6 +5697,16 @@ section,
   color: var(--accent-color);
   font-size: 0.95rem;
   margin-bottom: 20px;
+}
+
+.page-title .last-updated-heading {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border-radius: 30px;
+  color: var(--accent-color);
+  font-size: 0.95rem;
+  margin-top: 12px;
 }
 
 .terms-of-service .tos-header h2 {

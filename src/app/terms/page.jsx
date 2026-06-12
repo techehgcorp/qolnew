@@ -10,10 +10,11 @@ export default function TermsPage() {
               <div className="container">
                 <div className="row d-flex justify-content-center text-center">
                   <div className="col-lg-8">
-                    <h1 className="heading-title">Terms</h1>
+                    <h1 className="heading-title">Terms of Service</h1>
                     <p className="mb-0">
                       Review the terms that govern use of our website, plan resources, and support services for members and visitors.
                     </p>
+                    <span className="last-updated-heading">Last Updated: 6/10/2026</span>
                   </div>
                 </div>
               </div>
@@ -24,7 +25,8 @@ export default function TermsPage() {
                   <li>
                     <a href="index.html">Home</a>
                   </li>
-                  <li className="current">Terms</li>
+                  <li className="current">Terms of Service</li>
+                  
                 </ol>
               </div>
             </nav>
@@ -35,8 +37,7 @@ export default function TermsPage() {
             <div className="container" data-aos="fade-up">
               {/* Page Header */}
               <div className="tos-header text-center" data-aos="fade-up">
-                <span className="last-updated">Last Updated: February 27, 2025</span>
-                <h2>Terms of Service</h2>
+                <h2>Agreement Overview</h2>
                 <p>
                   Please read these terms of service carefully before using our
                   services
@@ -48,45 +49,36 @@ export default function TermsPage() {
                 <div id="agreement" className="content-section">
                   <h3>1. Agreement to Terms</h3>
                   <p>
-                    By accessing our website and services, you agree to be bound by
-                    these Terms of Service and all applicable laws and regulations. If
-                    you do not agree with any of these terms, you are prohibited from
-                    using or accessing our services.
+By accessing this website, you agree to be bound by these Terms of Service. This site is provided by Quality of Life Insurance and its licensed agents to offer information regarding life, health, Medicare, and ancillary insurance products.
                   </p>
-                  <div className="info-box">
+                  {/* <div className="info-box">
                     <i className="bi bi-info-circle" />
                     <p>
                       These terms apply to all users, visitors, and others who access
                       or use our services.
                     </p>
-                  </div>
+                  </div> */}
                 </div>
                 {/* Intellectual Property */}
                 <div id="intellectual-property" className="content-section">
-                  <h3>2. Intellectual Property Rights</h3>
+                  <h3>2. Not Medical Advice</h3>
                   <p>
-                    Our service and its original content, features, and functionality
-                    are owned by us and are protected by international copyright,
-                    trademark, patent, trade secret, and other intellectual property
-                    laws.
+                    The content provided on this website, including any downloadable guides, is for informational and educational purposes only. It does not constitute medical or legal advice. Always consult with a qualified professional regarding your specific health or financial needs.
                   </p>
-                  <ul className="list-items">
+                  {/* <ul className="list-items">
                     <li>All content is our exclusive property</li>
                     <li>You may not copy or modify the content</li>
                     <li>Our trademarks may not be used without permission</li>
                     <li>Content is for personal, non-commercial use only</li>
-                  </ul>
+                  </ul> */}
                 </div>
                 {/* User Accounts */}
                 <div id="user-accounts" className="content-section">
-                  <h3>3. User Accounts</h3>
+                  <h3>3. Medicare Disclaimer</h3>
                   <p>
-                    When you create an account with us, you must provide accurate,
-                    complete, and current information. Failure to do so constitutes a
-                    breach of the Terms, which may result in immediate termination of
-                    your account.
+                    We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.
                   </p>
-                  <div className="alert-box">
+                  {/* <div className="alert-box">
                     <i className="bi bi-exclamation-triangle" />
                     <div className="alert-content">
                       <h5>Important Notice</h5>
@@ -95,16 +87,15 @@ export default function TermsPage() {
                         activities that occur under your account.
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 {/* Prohibited Activities */}
                 <div id="prohibited" className="content-section">
-                  <h3>4. Prohibited Activities</h3>
+                  <h3>4. Limitation of Liability</h3>
                   <p>
-                    You may not access or use the Service for any purpose other than
-                    that for which we make it available.
+                    Quality of Life Insurance and its agents strive to keep all information accurate and up-to-date; however, insurance plan details, premiums, and availability are subject to change by the carriers. We are not liable for any inaccuracies or coverage decisions made based on the material presented on this site.
                   </p>
-                  <div className="prohibited-list">
+                  {/* <div className="prohibited-list">
                     <div className="prohibited-item">
                       <i className="bi bi-x-circle" />
                       <span>Systematic retrieval of data or content</span>
@@ -121,10 +112,10 @@ export default function TermsPage() {
                       <i className="bi bi-x-circle" />
                       <span>Attempting to gain unauthorized access</span>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 {/* Disclaimers */}
-                <div id="disclaimer" className="content-section">
+                {/* <div id="disclaimer" className="content-section">
                   <h3>5. Disclaimers</h3>
                   <p>
                     Your use of our service is at your sole risk. The service is
@@ -140,45 +131,45 @@ export default function TermsPage() {
                       <li>Any errors will be corrected</li>
                     </ul>
                   </div>
-                </div>
+                </div> */}
                 {/* Limitation of Liability */}
-                <div id="limitation" className="content-section">
+                {/* <div id="limitation" className="content-section">
                   <h3>6. Limitation of Liability</h3>
                   <p>
                     In no event shall we be liable for any indirect, punitive,
                     incidental, special, consequential, or exemplary damages arising
                     out of or in connection with your use of the service.
                   </p>
-                </div>
+                </div> */}
                 {/* Indemnification */}
-                <div id="indemnification" className="content-section">
+                {/* <div id="indemnification" className="content-section">
                   <h3>7. Indemnification</h3>
                   <p>
                     You agree to defend, indemnify, and hold us harmless from and
                     against any claims, liabilities, damages, losses, and expenses
                     arising out of your use of the service.
                   </p>
-                </div>
+                </div> */}
                 {/* Termination */}
-                <div id="termination" className="content-section">
+                {/* <div id="termination" className="content-section">
                   <h3>8. Termination</h3>
                   <p>
                     We may terminate or suspend your account immediately, without
                     prior notice or liability, for any reason whatsoever, including
                     without limitation if you breach the Terms.
                   </p>
-                </div>
+                </div> */}
                 {/* Governing Law */}
-                <div id="governing-law" className="content-section">
+                {/* <div id="governing-law" className="content-section">
                   <h3>9. Governing Law</h3>
                   <p>
                     These Terms shall be governed by and construed in accordance with
                     the laws of [Your Country], without regard to its conflict of law
                     provisions.
                   </p>
-                </div>
+                </div> */}
                 {/* Changes */}
-                <div id="changes" className="content-section">
+                {/* <div id="changes" className="content-section">
                   <h3>10. Changes to Terms</h3>
                   <p>
                     We reserve the right to modify or replace these Terms at any time.
@@ -192,7 +183,7 @@ export default function TermsPage() {
                       become effective, you agree to be bound by the revised terms.
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
               {/* Contact Section */}
               <div className="tos-contact" data-aos="fade-up" data-aos-delay={300}>

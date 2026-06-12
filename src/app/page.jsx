@@ -1,121 +1,13 @@
 import Link from "next/link";
 import React from "react";
+import HeroSection from "@/components/HeroSection";
 
 export default function HomePage() {
   return (
     <>
     <main className="main">
         {/* Hero Section */}
-        <section id="hero" className="hero section">
-        <div className="container" data-aos="fade-up" data-aos-delay={100}>
-            <div className="row align-items-center">
-            <div className="col-lg-6 mt-5">
-                <div className="hero-content">
-                <h1 data-aos="fade-right" data-aos-delay={300}>
-                    South Florida <br/><span className="highlight">Insurance Agency</span>
-                </h1>
-                <p
-                    className="hero-description"
-                    data-aos="fade-right"
-                    data-aos-delay={400}
-                >
-                    QOL Insurance helps individuals, families, and seniors compare life, health, medicare, dental, vision, final-expense, and accident plans with licensed support.                </p>
-                {/* <div
-                    className="hero-stats mb-4"
-                    data-aos="fade-right"
-                    data-aos-delay={500}
-                >
-                    <div className="stat-item">
-                    <h3>
-                        <span
-                        data-purecounter-start={0}
-                        data-purecounter-end={15}
-                        data-purecounter-duration={2}
-                        className="purecounter"
-                        />
-                        +
-                    </h3>
-                    <p>Years Experience</p>
-                    </div>
-                    <div className="stat-item">
-                    <h3>
-                        <span
-                        data-purecounter-start={0}
-                        data-purecounter-end={5000}
-                        data-purecounter-duration={2}
-                        className="purecounter"
-                        />
-                        +
-                    </h3>
-                    <p>Patients Treated</p>
-                    </div>
-                    <div className="stat-item">
-                    <h3>
-                        <span
-                        data-purecounter-start={0}
-                        data-purecounter-end={50}
-                        data-purecounter-duration={2}
-                        className="purecounter"
-                        />
-                        +
-                    </h3>
-                    <p>Medical Experts</p>
-                    </div>
-                </div> */}
-                <div
-                    className="hero-actions"
-                    data-aos="fade-right"
-                    data-aos-delay={600}
-                >
-                    <a href="#quote" className="btn btn-primary" data-quote-modal-trigger>
-                    Get a Free Quote<br />Talk to an Agent
-                    </a>
-                    <a
-                    href="#"
-                    className="btn btn-outline glightbox"
-                    >
-                    <i className="bi bi-play-circle me-2" />
-                    Take out watch our story
-                    </a>
-                </div>
-                {/* <div
-                    className="emergency-contact"
-                    data-aos="fade-right"
-                    data-aos-delay={700}
-                >
-                    <div className="emergency-icon">
-                    <i className="bi bi-telephone-fill" />
-                    </div>
-                    <div className="emergency-info">
-                    <small>Emergency Hotline</small>
-                    <strong>+1 (555) 911-2468</strong>
-                    </div>
-                </div> */}
-                </div>
-            </div>
-            <div className="col-lg-6">
-                <div
-                className="hero-visual"
-                data-aos="fade-left"
-                data-aos-delay={400}
-                >
-                <div className="main-image">
-                    <img
-                    src="/assets/img/health/staff-612.png"
-                    alt="Insurance advisor support"
-                    className="img-fluid"
-                    />
-                </div>
-                <div className="background-elements">
-                    <div className="element element-1" />
-                    <div className="element element-2" />
-                    <div className="element element-3" />
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        </section>
+        <HeroSection />
         {/* /Hero Section */}
         {/* Home About Section */}
         <section id="home-about" className="home-about section">

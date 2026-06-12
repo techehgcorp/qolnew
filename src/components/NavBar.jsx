@@ -122,7 +122,7 @@ export default function NavBar() {
   }, []);
 
   return (
-    <div className="branding d-flex align-items-cente">
+    <div className={`branding d-flex align-items-cente${pathname === "/" ? " hero-page" : ""}`}>
       <div className="container position-relative d-flex align-items-center justify-content-between">
         <Link href="/" className="logo d-flex align-items-center" onClick={closeMobileNav}>
           <img src="/assets/img/Logo.png" alt="QoL Insurance" />
