@@ -517,6 +517,12 @@ h6 {
 
 /* Mobile Navigation */
 @media (max-width: 1199px) {
+  /* Reduce branding side margins so the hamburger button fits fully inside the navbar pill */
+  .header .branding {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
   .mobile-nav-toggle {
     display: inline-grid;
     place-items: center;
@@ -528,9 +534,19 @@ h6 {
     color: var(--nav-color);
     font-size: 28px;
     line-height: 0;
-    margin-right: 10px;
+    margin-right: 0;
     cursor: pointer;
     transition: color 0.3s;
+  }
+
+  /* White toggle on hero section (transparent background needs contrast) */
+  .header .hero-page .mobile-nav-toggle {
+    color: rgba(255, 255, 255, 0.92);
+  }
+
+  /* Revert to dark when scrolled past the hero */
+  .scrolled .header .hero-page .mobile-nav-toggle {
+    color: var(--nav-color);
   }
 
   .navmenu {
@@ -676,6 +692,28 @@ h6 {
     inset: 60px 20px 20px 20px;
     height: calc(100dvh - 80px);
     max-height: calc(100dvh - 80px);
+  }
+
+  /* Hero page sets nav links white for the transparent header — revert to dark on mobile since the panel has a white background */
+  .mobile-nav-active .header .hero-page .navmenu ul li a,
+  .mobile-nav-active .header .hero-page .navmenu ul li a:focus {
+    color: var(--nav-dropdown-color);
+  }
+
+  .mobile-nav-active .header .hero-page .navmenu ul li a:hover,
+  .mobile-nav-active .header .hero-page .navmenu ul li .active,
+  .mobile-nav-active .header .hero-page .navmenu ul li .active:focus {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  /* Appointment and Quote buttons always stay white (they have a colored background) */
+  .mobile-nav-active .header .hero-page .navmenu ul li a.appointment-nav-button,
+  .mobile-nav-active .header .hero-page .navmenu ul li a.appointment-nav-button:focus,
+  .mobile-nav-active .header .hero-page .navmenu ul li a.appointment-nav-button:hover,
+  .mobile-nav-active .header .hero-page .navmenu ul li a.quote-nav-button,
+  .mobile-nav-active .header .hero-page .navmenu ul li a.quote-nav-button:focus,
+  .mobile-nav-active .header .hero-page .navmenu ul li a.quote-nav-button:hover {
+    color: var(--contrast-color);
   }
 }
 

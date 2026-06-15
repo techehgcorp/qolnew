@@ -121,6 +121,21 @@ export default function NavBar() {
     };
   }, []);
 
+  useEffect(() => {
+    if (!isMobileNavOpen) return;
+
+    const handleClickOutside = (e) => {
+      const panel = document.querySelector(".navmenu > ul");
+      const toggle = document.querySelector(".mobile-nav-toggle");
+      if (panel && !panel.contains(e.target) && toggle && !toggle.contains(e.target)) {
+        closeMobileNav();
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, [isMobileNavOpen]);
+
   return (
     <div className={`branding d-flex align-items-cente${pathname === "/" ? " hero-page" : ""}`}>
       <div className="container position-relative d-flex align-items-center justify-content-between">

@@ -191,6 +191,44 @@ export default function ProductsPage() {
                     </div>
                   </div>
                 </div>
+                <div
+                  className="col-lg-4 col-md-6"
+                  data-aos="fade-up"
+                  data-aos-delay={450}
+                >
+                  <div className="service-item">
+                    <div className="service-image">
+                      <img
+                        src="/assets/img/health/indexed-universal-life-insurance.jpg"
+                        alt="Indexed Universal Life Insurance"
+                        className="img-fluid"
+                      />
+                      <div className="service-overlay">
+                        <i className="fas fa-chart-line" />
+                      </div>
+                    </div>
+                    <div className="service-content">
+                      <h3>IUL (Indexed Universal Life Insurance)</h3>
+                      <p>
+                        Build permanent life insurance protection with cash
+                        value growth potential tied to a market index and
+                        flexible options for future financial planning.
+                      </p>
+                      <div className="service-features">
+                        <span className="feature-item">
+                          <i className="fas fa-check" /> Index-Linked Growth
+                        </span>
+                        <span className="feature-item">
+                          <i className="fas fa-check" /> Lifetime Protection
+                        </span>
+                      </div>
+                      <Link href="/resources/indexed-universal-life" className="service-btn">
+                        <span>Learn More</span>
+                        <i className="fas fa-arrow-right" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
                 {/* End Service Item */}
                 <div
                   className="col-lg-4 col-md-6"
@@ -269,44 +307,7 @@ export default function ProductsPage() {
                     </div>
                   </div>
                 </div>
-                <div
-                  className="col-lg-4 col-md-6"
-                  data-aos="fade-up"
-                  data-aos-delay={450}
-                >
-                  <div className="service-item">
-                    <div className="service-image">
-                      <img
-                        src="/assets/img/health/indexed-universal-life-insurance.jpg"
-                        alt="Indexed Universal Life Insurance"
-                        className="img-fluid"
-                      />
-                      <div className="service-overlay">
-                        <i className="fas fa-chart-line" />
-                      </div>
-                    </div>
-                    <div className="service-content">
-                      <h3>IUL (Indexed Universal Life Insurance)</h3>
-                      <p>
-                        Build permanent life insurance protection with cash
-                        value growth potential tied to a market index and
-                        flexible options for future financial planning.
-                      </p>
-                      <div className="service-features">
-                        <span className="feature-item">
-                          <i className="fas fa-check" /> Index-Linked Growth
-                        </span>
-                        <span className="feature-item">
-                          <i className="fas fa-check" /> Lifetime Protection
-                        </span>
-                      </div>
-                      <Link href="/resources/indexed-universal-life" className="service-btn">
-                        <span>Learn More</span>
-                        <i className="fas fa-arrow-right" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+                
                 {/* End Service Item */}
               </div>
             </div>

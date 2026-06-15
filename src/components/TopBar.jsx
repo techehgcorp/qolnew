@@ -1,16 +1,16 @@
 export default function TopBar() {
   return (
     <div className="topbar d-flex align-items-center dark-background">
-      <div className="container d-flex justify-content-center justify-content-md-between">
+      <div className="container position-relative d-flex align-items-center justify-content-center">
         <div className="contact-info d-flex align-items-center">
           <i className="bi bi-envelope d-flex align-items-center">
-            <a href="mailto:contact@example.com">info@qolinsurance.com</a>
+            <a href="mailto:info@qolinsurance.com">info@qolinsurance.com</a>
           </i>
           <i className="bi bi-phone d-flex align-items-center ms-4">
             <a href="tel:+18447300124">+(844) 730-0124</a>
           </i>
         </div>
-        <div className="social-links d-none d-md-flex align-items-center">
+        <div className="social-links d-flex align-items-center position-absolute end-0">
           <a
             href="https://www.facebook.com/share/1EaXxabHD4/?mibextid=wwXIfr"
             className="facebook"
