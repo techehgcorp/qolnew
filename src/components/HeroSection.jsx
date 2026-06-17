@@ -209,11 +209,11 @@ export default function HeroSection() {
                 <a href="#quote" className="btn btn-primary" data-quote-modal-trigger>
                   Get a Free Quote<br />Talk to an Agent
                 </a>
-                <a href="#" className="btn btn-outline glightbox"
+                {/* <a href="#" className="btn btn-outline glightbox"
                   style={{ color: "#fff", borderColor: "rgba(255,255,255,0.5)" }}>
                   <i className="bi bi-play-circle me-2" />
                   Take out watch our story
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
